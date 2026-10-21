@@ -21,10 +21,7 @@ logger = get_logger('executor')
 
 TIMEOUT = 10
 
-BLACKLIST = [
-    'format', 'mkfs', 'dd if=',
-    'deltree', 'rd /s /q c:\\windows', 'shutdown', 'reboot',
-]
+from orc.sysbridge import BLACKLIST, is_blacklisted
 
 APP_ALIASES = {
     'chrome':     'start chrome',
@@ -291,13 +288,15 @@ def get_clipboard_text(arg=''):
 
 
 UI_COMMANDS = {
-    'close_tab':    close_current_tab,
-    'new_tab':      open_new_tab,
-    'navigate':     navigate_url,
-    'close_browser': close_browser,
-    'next_tab':     switch_tab_next,
-    'prev_tab':     switch_tab_prev,
-    'reopen_tab':   reopen_closed_tab,
+    'close_tab':      close_current_tab,
+    'new_tab':        open_new_tab,
+    'navigate':       navigate_url,
+    'close_browser':  close_browser,
+    'next_tab':       switch_tab_next,
+    'prev_tab':       switch_tab_prev,
+    'reopen_tab':     reopen_closed_tab,
+    'clipboard':      get_clipboard_text,
+    'get_clipboard':  get_clipboard_text,
 }
 
 # Backward-compat module-level wrappers

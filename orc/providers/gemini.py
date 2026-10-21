@@ -140,11 +140,15 @@ class GeminiProvider(AIProvider):
             if ('503' in str(e) or 'unavailable' in err_msg or 'high demand' in err_msg or 'overloaded' in err_msg) and model == "gemini-3.8-flash":
                 logger.warning("gemini-3.8-flash high demand (503); failing over to gemini-3.5-flash-lite")
                 model = "gemini-3.5-flash-lite"
-                response = client.models.generate_content(
-                    model=model,
-                    contents=contents,
-                    config=config,
-                )
+                try:
+                    response = client.models.generate_content(
+                        model=model,
+                        contents=contents,
+                        config=config,
+                    )
+                except Exception as inner_e:
+                    logger.error(f"Failover model gemini-3.5-flash-lite also failed: {inner_e}")
+                    raise
             else:
                 raise
         latency_ms = int((time.time() - start) * 1000)

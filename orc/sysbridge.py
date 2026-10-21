@@ -69,7 +69,10 @@ TIMEOUT = 10  # seconds
 # commands that are too dangerous to run
 BLACKLIST = [
     'format', 'mkfs', 'dd if=', 'rm -rf /',
-    'deltree', 'rd /s', 'shutdown', 'reboot',
+    'deltree', 'rd /s', 'rmdir /s', 'shutdown', 'reboot',
+    'remove-item -recurse', 'remove-item -r', 'remove-item * -force',
+    'del /s /q c:\\', 'del /s /q c:/',
+    'bcdedit', 'diskpart', 'reg delete',
 ]
 
 
