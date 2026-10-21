@@ -431,19 +431,81 @@ def user_location_v0(ctx: ToolContext) -> ToolResult:
             precision="exact",
         )
 
+    import subprocess
     import httpx
+    from pathlib import Path
 
+    # Try Windows Native Geolocation (Wi-Fi triangulation & system location framework)
+    try:
+        ws = getattr(ctx.settings, "workspace", None) or Path(__file__).resolve().parent.parent.parent.parent
+        script = Path(ws) / "orc" / "get_location.ps1"
+        if script.exists():
+            proc = subprocess.run(
+                ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", str(script)],
+                capture_output=True,
+                text=True,
+                timeout=8,
+            )
+            out = proc.stdout.strip()
+            if out and "," in out:
+                parts = out.split(",")
+                lat = float(parts[0])
+                lon = float(parts[1])
+                acc = float(parts[2]) if len(parts) > 2 else None
+                # Reverse geocode via Nominatim
+                headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) OrynAgent/1.0"}
+                rev = httpx.get(
+                    f"https://nominatim.openstreetmap.org/reverse?lat={lat}&lon={lon}&format=json",
+                    headers=headers,
+                    timeout=5,
+                ).json()
+                display_name = rev.get("display_name") or f"{lat}, {lon}"
+                addr = rev.get("address", {})
+                city = addr.get("city") or addr.get("town") or addr.get("village") or addr.get("county") or ""
+                region = addr.get("state") or ""
+                country = addr.get("country") or ""
+                return ToolResult.text(
+                    display_name,
+                    latitude=lat,
+                    longitude=lon,
+                    city=city,
+                    region=region,
+                    country=country,
+                    accuracy_meters=acc,
+                    source="windows-location-service",
+                    precision=f"high (~{int(acc)}m)" if acc else "high",
+                )
+    except Exception:
+        pass
+
+    # Fallback to IP geolocation
+    payload = None
     try:
         with httpx.Client(timeout=ctx.settings.request_timeout) as client:
-            response = client.get("https://ipapi.co/json/")
-            response.raise_for_status()
-            payload = response.json()
+            resp = client.get("https://ipapi.co/json/")
+            if resp.status_code == 200 and not resp.json().get("error"):
+                payload = resp.json()
+            else:
+                resp2 = client.get("http://ip-api.com/json")
+                if resp2.status_code == 200:
+                    data = resp2.json()
+                    payload = {
+                        "city": data.get("city"),
+                        "region": data.get("regionName"),
+                        "country_name": data.get("country"),
+                        "latitude": data.get("lat"),
+                        "longitude": data.get("lon"),
+                        "timezone": data.get("timezone"),
+                    }
     except Exception as exc:  # noqa: BLE001
         return ToolResult.error(
             f"location unavailable: {type(exc).__name__}: {exc}. "
             "Set AGENT_LATITUDE and AGENT_LONGITUDE to avoid geolocation lookups.",
             error="network_error",
         )
+
+    if not payload:
+        return ToolResult.error("location unavailable: IP geolocation failed", error="network_error")
     city = payload.get("city") or ""
     region = payload.get("region") or ""
     country = payload.get("country_name") or ""

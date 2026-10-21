@@ -16,7 +16,7 @@ from agent.tools.base import ToolContext, ToolResult, tool
 
 NOMINATIM = "https://nominatim.openstreetmap.org/search"
 ESPN = "https://site.api.espn.com/apis/site/v2/sports/{sport}/{league}/scoreboard"
-USER_AGENT = "OpenAgent/0.1 (places tool; contact: agent@example.invalid)"
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) OrynAgent/1.0 (contact: admin@oryn.local)"
 
 
 @tool(group="Places and sports", tags=("places", "search", "map", "restaurant", "nearby"))
@@ -173,8 +173,12 @@ def fetch_sports_data(
         return ToolResult.error(f"invalid date {day!r}; expected YYYY-MM-DD", error="invalid_arguments")
 
     url = ESPN.format(sport=sport, league=league)
+    espn_headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "application/json",
+    }
     try:
-        with httpx.Client(timeout=ctx.settings.request_timeout, headers={"User-Agent": USER_AGENT}) as client:
+        with httpx.Client(timeout=ctx.settings.request_timeout, headers=espn_headers) as client:
             response = client.get(url, params={"dates": parsed.strftime("%Y%m%d")})
             response.raise_for_status()
             payload = response.json()

@@ -1,0 +1,28 @@
+# Core
+google-genai>=0.1.0
+groq>=1.0.0
+openai>=1.0.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+httpx>=0.25.0
+pydantic>=2.0.0
+PyYAML>=6.0
+
+# Keyboard & UI
+keyboard>=0.13.5
+pyautogui>=0.9.54
+
+# Web Search
+duckduckgo-search>=5.0
+
+# Voice
+openai-whisper>=20231117
+pyttsx3>=2.90
+sounddevice>=0.4.6
+numpy>=1.24.0
+
+# Translation
+deep-translator>=1.11.0
+
+# Encryption
+cryptography>=41.0.0

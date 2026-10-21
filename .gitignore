@@ -1,16 +1,39 @@
-# Local environment
-.venv/
+# Environment & Secrets (NEVER COMMIT)
+.env
+*.env
+!.env.example
+
+# Python
 __pycache__/
 *.py[cod]
-.pytest_cache/
-.ruff_cache/
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
 
-# Agent runtime output (never commit: may contain user data or secrets)
+# Temporary & runtime state
+.freebuff/
+logs/
+data/*
+!data/.gitkeep
+orc/data/*
+!orc/data/.gitkeep
 state/
-artifacts/
 *.log
 
-# Secrets
-.env
-.env.*
-!.env.example
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+n.txt
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
