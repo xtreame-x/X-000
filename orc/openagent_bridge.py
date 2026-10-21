@@ -91,10 +91,88 @@ def call_openagent_tool(tool_name: str, arguments: Optional[Dict[str, Any]] = No
                     args['start'] = args.pop('start_time')
                 if 'end_time' in args and 'end' not in args:
                     args['end'] = args.pop('end_time')
+            elif tool_name == 'str_replace':
+                if 'replacements' not in args and ('old_str' in args or 'old' in args):
+                    old = args.pop('old_str', args.pop('old', ''))
+                    new = args.pop('new_str', args.pop('new', ''))
+                    args['replacements'] = [{'old': old, 'new': new}]
+            elif tool_name in ('memory_read', 'memory_delete'):
+                if 'key' in args and 'name' not in args:
+                    args['name'] = args.pop('key')
+            elif tool_name in ('memory_write', 'memory_append'):
+                if 'key' in args and 'name' not in args:
+                    args['name'] = args.pop('key')
+                if 'value' in args and 'content' not in args:
+                    args['content'] = args.pop('value')
+            elif tool_name == 'memory_str_replace':
+                if 'key' in args and 'name' not in args:
+                    args['name'] = args.pop('key')
+                if 'old_str' in args and 'old' not in args:
+                    args['old'] = args.pop('old_str')
+                if 'new_str' in args and 'new' not in args:
+                    args['new'] = args.pop('new_str')
+            elif tool_name == 'message_compose_v1':
+                if 'recipient' in args and 'to' not in args:
+                    args['to'] = args.pop('recipient')
+                if 'message' in args and 'body' not in args:
+                    args['body'] = args.pop('message')
+                if 'to' in args and isinstance(args['to'], str):
+                    args['to'] = [args['to']]
+            elif tool_name == 'ask_user_input_v0':
+                if 'prompt' in args and 'question' not in args:
+                    args['question'] = args.pop('prompt')
+            elif tool_name == 'recipe_display_v0':
+                if 'instructions' in args and 'steps' not in args:
+                    args['steps'] = args.pop('instructions')
+            elif tool_name == 'suggest_connectors':
+                if 'intent' in args and 'goal' not in args:
+                    args['goal'] = args.pop('intent')
+                elif 'query' in args and 'goal' not in args:
+                    args['goal'] = args.pop('query')
+            elif tool_name == 'chart_display_v0':
+                if 'type' in args and 'chart_type' not in args:
+                    args['chart_type'] = args.pop('type')
+                if 'labels' in args and 'values' in args and 'data' not in args:
+                    labels = args.pop('labels', [])
+                    values = args.pop('values', [])
+                    args['data'] = [{'label': l, 'value': v} for l, v in zip(labels, values)]
+                    args['x'] = 'label'
+                    args['y'] = 'value'
+            elif tool_name == 'mcp__visualize__show_widget':
+                if 'data' in args and 'content' not in args:
+                    import json
+                    args['content'] = json.dumps(args.pop('data'))
+                if args.get('widget_type') not in ('html', 'svg', 'markdown'):
+                    args['widget_type'] = 'markdown'
+            elif tool_name == 'mcp__Three_js_3D_Viewer__show_threejs_scene':
+                if 'scene' in args and isinstance(args['scene'], str):
+                    import json
+                    try:
+                        args['scene'] = json.loads(args['scene'])
+                    except Exception:
+                        pass
+            elif tool_name == 'mcp__Google_Drive__copy_file':
+                if 'new_name' in args and 'name' not in args:
+                    args['name'] = args.pop('new_name')
+            elif tool_name == 'mcp__Google_Drive__download_file_content':
+                if 'destination' not in args:
+                    args['destination'] = f"downloads/{args.get('file_id', 'file')}"
+            elif tool_name == 'mcp__Google_Drive__share_file':
+                args.pop('type', None)
+                if 'email' not in args:
+                    for k in ('user', 'to', 'recipient'):
+                        if k in args:
+                            args['email'] = args.pop(k)
+                            break
+                    if 'email' not in args:
+                        args['email'] = 'anyone@example.invalid'
 
         res = tool.invoke(args, ctx)
         return res.text_content()
     except Exception as e:
+        err_str = str(e)
+        if 'NotConfigured' in type(e).__name__ or 'is not configured' in err_str:
+            return f"[Tool Not Configured] {err_str}"
         logger.warning(f"Error calling {tool_name}: {e}")
         return f"tool execution error ({tool_name}): {e}"
 

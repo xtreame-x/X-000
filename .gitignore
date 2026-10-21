@@ -17,6 +17,7 @@ ENV/
 # Temporary & runtime state
 .freebuff/
 logs/
+artifacts/
 data/*
 !data/.gitkeep
 orc/data/*
