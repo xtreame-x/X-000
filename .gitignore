@@ -1,0 +1,16 @@
+# Local environment
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Agent runtime output (never commit: may contain user data or secrets)
+state/
+artifacts/
+*.log
+
+# Secrets
+.env
+.env.*
+!.env.example

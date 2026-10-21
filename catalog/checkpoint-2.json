@@ -1,0 +1,2382 @@
+[
+  {
+    "name": "mcp__Vercel__accept_project_transfer_request",
+    "invocation_name": "mcp__Vercel__accept_project_transfer_request",
+    "shortName": "accept_project_transfer_request",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 66
+  },
+  {
+    "name": "mcp__Vercel__activate_kms_signing_key",
+    "invocation_name": "mcp__Vercel__activate_kms_signing_key",
+    "shortName": "activate_kms_signing_key",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 67
+  },
+  {
+    "name": "mcp__Vercel__add_project_domain",
+    "invocation_name": "mcp__Vercel__add_project_domain",
+    "shortName": "add_project_domain",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 68
+  },
+  {
+    "name": "mcp__Vercel__add_route",
+    "invocation_name": "mcp__Vercel__add_route",
+    "shortName": "add_route",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 69
+  },
+  {
+    "name": "mcp__Vercel__add_toolbar_reaction",
+    "invocation_name": "mcp__Vercel__add_toolbar_reaction",
+    "shortName": "add_toolbar_reaction",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 70
+  },
+  {
+    "name": "mcp__Vercel__aggregate_events",
+    "invocation_name": "mcp__Vercel__aggregate_events",
+    "shortName": "aggregate_events",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 71
+  },
+  {
+    "name": "mcp__Vercel__aggregate_pageviews",
+    "invocation_name": "mcp__Vercel__aggregate_pageviews",
+    "shortName": "aggregate_pageviews",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 72
+  },
+  {
+    "name": "mcp__Vercel__approve_rolling_release_stage",
+    "invocation_name": "mcp__Vercel__approve_rolling_release_stage",
+    "shortName": "approve_rolling_release_stage",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 73
+  },
+  {
+    "name": "mcp__Vercel__artifact_query",
+    "invocation_name": "mcp__Vercel__artifact_query",
+    "shortName": "artifact_query",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 74
+  },
+  {
+    "name": "mcp__Vercel__assign_alias",
+    "invocation_name": "mcp__Vercel__assign_alias",
+    "shortName": "assign_alias",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 75
+  },
+  {
+    "name": "mcp__Vercel__authorize_team_sso",
+    "invocation_name": "mcp__Vercel__authorize_team_sso",
+    "shortName": "authorize_team_sso",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 76
+  },
+  {
+    "name": "mcp__Vercel__buy_domain",
+    "invocation_name": "mcp__Vercel__buy_domain",
+    "shortName": "buy_domain",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 77
+  },
+  {
+    "name": "mcp__Vercel__cancel_deployment",
+    "invocation_name": "mcp__Vercel__cancel_deployment",
+    "shortName": "cancel_deployment",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 78
+  },
+  {
+    "name": "mcp__Vercel__change_toolbar_thread_resolve_status",
+    "invocation_name": "mcp__Vercel__change_toolbar_thread_resolve_status",
+    "shortName": "change_toolbar_thread_resolve_status",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 79
+  },
+  {
+    "name": "mcp__Vercel__complete_rolling_release",
+    "invocation_name": "mcp__Vercel__complete_rolling_release",
+    "shortName": "complete_rolling_release",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 80
+  },
+  {
+    "name": "mcp__Vercel__count_events",
+    "invocation_name": "mcp__Vercel__count_events",
+    "shortName": "count_events",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 81
+  },
+  {
+    "name": "mcp__Vercel__count_pageviews",
+    "invocation_name": "mcp__Vercel__count_pageviews",
+    "shortName": "count_pageviews",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 82
+  },
+  {
+    "name": "mcp__Vercel__create_deployment",
+    "invocation_name": "mcp__Vercel__create_deployment",
+    "shortName": "create_deployment",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 83
+  },
+  {
+    "name": "mcp__Vercel__create_drain",
+    "invocation_name": "mcp__Vercel__create_drain",
+    "shortName": "create_drain",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 84
+  },
+  {
+    "name": "mcp__Vercel__create_edge_config",
+    "invocation_name": "mcp__Vercel__create_edge_config",
+    "shortName": "create_edge_config",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 85
+  },
+  {
+    "name": "mcp__Vercel__create_edge_config_token",
+    "invocation_name": "mcp__Vercel__create_edge_config_token",
+    "shortName": "create_edge_config_token",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 86
+  },
+  {
+    "name": "mcp__Vercel__create_flag",
+    "invocation_name": "mcp__Vercel__create_flag",
+    "shortName": "create_flag",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 87
+  },
+  {
+    "name": "mcp__Vercel__create_git_project",
+    "invocation_name": "mcp__Vercel__create_git_project",
+    "shortName": "create_git_project",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 88
+  },
+  {
+    "name": "mcp__Vercel__create_kms_issuer",
+    "invocation_name": "mcp__Vercel__create_kms_issuer",
+    "shortName": "create_kms_issuer",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 89
+  },
+  {
+    "name": "mcp__Vercel__create_kms_issuer_policy",
+    "invocation_name": "mcp__Vercel__create_kms_issuer_policy",
+    "shortName": "create_kms_issuer_policy",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 90
+  },
+  {
+    "name": "mcp__Vercel__create_kms_signing_key",
+    "invocation_name": "mcp__Vercel__create_kms_signing_key",
+    "shortName": "create_kms_signing_key",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 91
+  },
+  {
+    "name": "mcp__Vercel__create_observability_query",
+    "invocation_name": "mcp__Vercel__create_observability_query",
+    "shortName": "create_observability_query",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 92
+  },
+  {
+    "name": "mcp__Vercel__create_or_transfer_domain",
+    "invocation_name": "mcp__Vercel__create_or_transfer_domain",
+    "shortName": "create_or_transfer_domain",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 93
+  },
+  {
+    "name": "mcp__Vercel__create_project",
+    "invocation_name": "mcp__Vercel__create_project",
+    "shortName": "create_project",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 94
+  },
+  {
+    "name": "mcp__Vercel__create_project_env",
+    "invocation_name": "mcp__Vercel__create_project_env",
+    "shortName": "create_project_env",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 95
+  },
+  {
+    "name": "mcp__Vercel__create_record",
+    "invocation_name": "mcp__Vercel__create_record",
+    "shortName": "create_record",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 96
+  },
+  {
+    "name": "mcp__Vercel__create_sandboxes_sessions_by_session_id_snapshot_v2",
+    "invocation_name": "mcp__Vercel__create_sandboxes_sessions_by_session_id_snapshot_v2",
+    "shortName": "create_sandboxes_sessions_by_session_id_snapshot_v2",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 97
+  },
+  {
+    "name": "mcp__Vercel__create_sandboxes_sessions_by_session_id_snapshot_v3",
+    "invocation_name": "mcp__Vercel__create_sandboxes_sessions_by_session_id_snapshot_v3",
+    "shortName": "create_sandboxes_sessions_by_session_id_snapshot_v3",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 98
+  },
+  {
+    "name": "mcp__Vercel__create_sandboxes_v2",
+    "invocation_name": "mcp__Vercel__create_sandboxes_v2",
+    "shortName": "create_sandboxes_v2",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 99
+  },
+  {
+    "name": "mcp__Vercel__create_sandboxes_v3",
+    "invocation_name": "mcp__Vercel__create_sandboxes_v3",
+    "shortName": "create_sandboxes_v3",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 100
+  },
+  {
+    "name": "mcp__Vercel__create_sandboxes_v4",
+    "invocation_name": "mcp__Vercel__create_sandboxes_v4",
+    "shortName": "create_sandboxes_v4",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 101
+  },
+  {
+    "name": "mcp__Vercel__create_sdk_key",
+    "invocation_name": "mcp__Vercel__create_sdk_key",
+    "shortName": "create_sdk_key",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 102
+  },
+  {
+    "name": "mcp__Vercel__create_session_directory",
+    "invocation_name": "mcp__Vercel__create_session_directory",
+    "shortName": "create_session_directory",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 103
+  },
+  {
+    "name": "mcp__Vercel__create_storage_stores_blob",
+    "invocation_name": "mcp__Vercel__create_storage_stores_blob",
+    "shortName": "create_storage_stores_blob",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 104
+  },
+  {
+    "name": "mcp__Vercel__create_trace_session",
+    "invocation_name": "mcp__Vercel__create_trace_session",
+    "shortName": "create_trace_session",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 105
+  },
+  {
+    "name": "mcp__Vercel__edit_project_env",
+    "invocation_name": "mcp__Vercel__edit_project_env",
+    "shortName": "edit_project_env",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 106
+  },
+  {
+    "name": "mcp__Vercel__edit_route",
+    "invocation_name": "mcp__Vercel__edit_route",
+    "shortName": "edit_route",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 107
+  },
+  {
+    "name": "mcp__Vercel__edit_toolbar_message",
+    "invocation_name": "mcp__Vercel__edit_toolbar_message",
+    "shortName": "edit_toolbar_message",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 108
+  },
+  {
+    "name": "mcp__Vercel__extend_session_timeout",
+    "invocation_name": "mcp__Vercel__extend_session_timeout",
+    "shortName": "extend_session_timeout",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 109
+  },
+  {
+    "name": "mcp__Vercel__filter_project_envs",
+    "invocation_name": "mcp__Vercel__filter_project_envs",
+    "shortName": "filter_project_envs",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 110
+  },
+  {
+    "name": "mcp__Vercel__generate_route",
+    "invocation_name": "mcp__Vercel__generate_route",
+    "shortName": "generate_route",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 111
+  },
+  {
+    "name": "mcp__Vercel__get_access_to_vercel_url",
+    "invocation_name": "mcp__Vercel__get_access_to_vercel_url",
+    "shortName": "get_access_to_vercel_url",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 112
+  },
+  {
+    "name": "mcp__Vercel__get_active_attack_status",
+    "invocation_name": "mcp__Vercel__get_active_attack_status",
+    "shortName": "get_active_attack_status",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 113
+  },
+  {
+    "name": "mcp__Vercel__get_agent_run",
+    "invocation_name": "mcp__Vercel__get_agent_run",
+    "shortName": "get_agent_run",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 114
+  },
+  {
+    "name": "mcp__Vercel__get_agent_run_trace",
+    "invocation_name": "mcp__Vercel__get_agent_run_trace",
+    "shortName": "get_agent_run_trace",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 115
+  },
+  {
+    "name": "mcp__Vercel__get_alias",
+    "invocation_name": "mcp__Vercel__get_alias",
+    "shortName": "get_alias",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 116
+  },
+  {
+    "name": "mcp__Vercel__get_auth_user",
+    "invocation_name": "mcp__Vercel__get_auth_user",
+    "shortName": "get_auth_user",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 117
+  },
+  {
+    "name": "mcp__Vercel__get_bulk_availability",
+    "invocation_name": "mcp__Vercel__get_bulk_availability",
+    "shortName": "get_bulk_availability",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 118
+  },
+  {
+    "name": "mcp__Vercel__get_bulk_price",
+    "invocation_name": "mcp__Vercel__get_bulk_price",
+    "shortName": "get_bulk_price",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 119
+  },
+  {
+    "name": "mcp__Vercel__get_bypass_ip",
+    "invocation_name": "mcp__Vercel__get_bypass_ip",
+    "shortName": "get_bypass_ip",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 120
+  },
+  {
+    "name": "mcp__Vercel__get_cert_by_id",
+    "invocation_name": "mcp__Vercel__get_cert_by_id",
+    "shortName": "get_cert_by_id",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 121
+  },
+  {
+    "name": "mcp__Vercel__get_configuration",
+    "invocation_name": "mcp__Vercel__get_configuration",
+    "shortName": "get_configuration",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 122
+  },
+  {
+    "name": "mcp__Vercel__get_connector",
+    "invocation_name": "mcp__Vercel__get_connector",
+    "shortName": "get_connector",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 123
+  },
+  {
+    "name": "mcp__Vercel__get_connector_project_connection",
+    "invocation_name": "mcp__Vercel__get_connector_project_connection",
+    "shortName": "get_connector_project_connection",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 124
+  },
+  {
+    "name": "mcp__Vercel__get_contact_info_schema",
+    "invocation_name": "mcp__Vercel__get_contact_info_schema",
+    "shortName": "get_contact_info_schema",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 125
+  },
+  {
+    "name": "mcp__Vercel__get_custom_environment",
+    "invocation_name": "mcp__Vercel__get_custom_environment",
+    "shortName": "get_custom_environment",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 126
+  },
+  {
+    "name": "mcp__Vercel__get_deployment",
+    "invocation_name": "mcp__Vercel__get_deployment",
+    "shortName": "get_deployment",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 127
+  },
+  {
+    "name": "mcp__Vercel__get_deployment_feature_flags",
+    "invocation_name": "mcp__Vercel__get_deployment_feature_flags",
+    "shortName": "get_deployment_feature_flags",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 128
+  },
+  {
+    "name": "mcp__Vercel__get_deployment_file_contents",
+    "invocation_name": "mcp__Vercel__get_deployment_file_contents",
+    "shortName": "get_deployment_file_contents",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 129
+  },
+  {
+    "name": "mcp__Vercel__get_domain",
+    "invocation_name": "mcp__Vercel__get_domain",
+    "shortName": "get_domain",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 130
+  },
+  {
+    "name": "mcp__Vercel__get_domain_availability",
+    "invocation_name": "mcp__Vercel__get_domain_availability",
+    "shortName": "get_domain_availability",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 131
+  },
+  {
+    "name": "mcp__Vercel__get_domain_config",
+    "invocation_name": "mcp__Vercel__get_domain_config",
+    "shortName": "get_domain_config",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 132
+  },
+  {
+    "name": "mcp__Vercel__get_domain_contact_verification",
+    "invocation_name": "mcp__Vercel__get_domain_contact_verification",
+    "shortName": "get_domain_contact_verification",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 133
+  },
+  {
+    "name": "mcp__Vercel__get_domain_order",
+    "invocation_name": "mcp__Vercel__get_domain_order",
+    "shortName": "get_domain_order",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 134
+  },
+  {
+    "name": "mcp__Vercel__get_domain_price",
+    "invocation_name": "mcp__Vercel__get_domain_price",
+    "shortName": "get_domain_price",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 135
+  },
+  {
+    "name": "mcp__Vercel__get_domain_project_domains",
+    "invocation_name": "mcp__Vercel__get_domain_project_domains",
+    "shortName": "get_domain_project_domains",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 136
+  },
+  {
+    "name": "mcp__Vercel__get_domain_verification_record",
+    "invocation_name": "mcp__Vercel__get_domain_verification_record",
+    "shortName": "get_domain_verification_record",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 137
+  },
+  {
+    "name": "mcp__Vercel__get_domains_records_by_record_id",
+    "invocation_name": "mcp__Vercel__get_domains_records_by_record_id",
+    "shortName": "get_domains_records_by_record_id",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 138
+  },
+  {
+    "name": "mcp__Vercel__get_drain",
+    "invocation_name": "mcp__Vercel__get_drain",
+    "shortName": "get_drain",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 139
+  },
+  {
+    "name": "mcp__Vercel__get_edge_config",
+    "invocation_name": "mcp__Vercel__get_edge_config",
+    "shortName": "get_edge_config",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 140
+  },
+  {
+    "name": "mcp__Vercel__get_edge_config_backup",
+    "invocation_name": "mcp__Vercel__get_edge_config_backup",
+    "shortName": "get_edge_config_backup",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 141
+  },
+  {
+    "name": "mcp__Vercel__get_edge_config_backups",
+    "invocation_name": "mcp__Vercel__get_edge_config_backups",
+    "shortName": "get_edge_config_backups",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 142
+  },
+  {
+    "name": "mcp__Vercel__get_edge_config_item",
+    "invocation_name": "mcp__Vercel__get_edge_config_item",
+    "shortName": "get_edge_config_item",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 143
+  },
+  {
+    "name": "mcp__Vercel__get_edge_config_items",
+    "invocation_name": "mcp__Vercel__get_edge_config_items",
+    "shortName": "get_edge_config_items",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 144
+  },
+  {
+    "name": "mcp__Vercel__get_edge_config_token",
+    "invocation_name": "mcp__Vercel__get_edge_config_token",
+    "shortName": "get_edge_config_token",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 145
+  },
+  {
+    "name": "mcp__Vercel__get_edge_config_tokens",
+    "invocation_name": "mcp__Vercel__get_edge_config_tokens",
+    "shortName": "get_edge_config_tokens",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 146
+  },
+  {
+    "name": "mcp__Vercel__get_edge_configs",
+    "invocation_name": "mcp__Vercel__get_edge_configs",
+    "shortName": "get_edge_configs",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 147
+  },
+  {
+    "name": "mcp__Vercel__get_firewall_config",
+    "invocation_name": "mcp__Vercel__get_firewall_config",
+    "shortName": "get_firewall_config",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 148
+  },
+  {
+    "name": "mcp__Vercel__get_flag",
+    "invocation_name": "mcp__Vercel__get_flag",
+    "shortName": "get_flag",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 149
+  },
+  {
+    "name": "mcp__Vercel__get_flag_segment",
+    "invocation_name": "mcp__Vercel__get_flag_segment",
+    "shortName": "get_flag_segment",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 150
+  },
+  {
+    "name": "mcp__Vercel__get_flag_settings",
+    "invocation_name": "mcp__Vercel__get_flag_settings",
+    "shortName": "get_flag_settings",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 151
+  },
+  {
+    "name": "mcp__Vercel__get_git_deployment_context",
+    "invocation_name": "mcp__Vercel__get_git_deployment_context",
+    "shortName": "get_git_deployment_context",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 152
+  },
+  {
+    "name": "mcp__Vercel__get_kms_issuer",
+    "invocation_name": "mcp__Vercel__get_kms_issuer",
+    "shortName": "get_kms_issuer",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 153
+  },
+  {
+    "name": "mcp__Vercel__get_microfrontends_config",
+    "invocation_name": "mcp__Vercel__get_microfrontends_config",
+    "shortName": "get_microfrontends_config",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 154
+  },
+  {
+    "name": "mcp__Vercel__get_microfrontends_config_for_project",
+    "invocation_name": "mcp__Vercel__get_microfrontends_config_for_project",
+    "shortName": "get_microfrontends_config_for_project",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 155
+  },
+  {
+    "name": "mcp__Vercel__get_named_sandbox",
+    "invocation_name": "mcp__Vercel__get_named_sandbox",
+    "shortName": "get_named_sandbox",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 156
+  },
+  {
+    "name": "mcp__Vercel__get_observability_configuration_projects",
+    "invocation_name": "mcp__Vercel__get_observability_configuration_projects",
+    "shortName": "get_observability_configuration_projects",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 157
+  },
+  {
+    "name": "mcp__Vercel__get_observability_schema",
+    "invocation_name": "mcp__Vercel__get_observability_schema",
+    "shortName": "get_observability_schema",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 158
+  },
+  {
+    "name": "mcp__Vercel__get_order",
+    "invocation_name": "mcp__Vercel__get_order",
+    "shortName": "get_order",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 159
+  },
+  {
+    "name": "mcp__Vercel__get_project",
+    "invocation_name": "mcp__Vercel__get_project",
+    "shortName": "get_project",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 160
+  },
+  {
+    "name": "mcp__Vercel__get_project_deletion_link",
+    "invocation_name": "mcp__Vercel__get_project_deletion_link",
+    "shortName": "get_project_deletion_link",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 161
+  },
+  {
+    "name": "mcp__Vercel__get_project_domain",
+    "invocation_name": "mcp__Vercel__get_project_domain",
+    "shortName": "get_project_domain",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 162
+  },
+  {
+    "name": "mcp__Vercel__get_project_env",
+    "invocation_name": "mcp__Vercel__get_project_env",
+    "shortName": "get_project_env",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 163
+  },
+  {
+    "name": "mcp__Vercel__get_project_trace",
+    "invocation_name": "mcp__Vercel__get_project_trace",
+    "shortName": "get_project_trace",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 164
+  },
+  {
+    "name": "mcp__Vercel__get_purchase_quote",
+    "invocation_name": "mcp__Vercel__get_purchase_quote",
+    "shortName": "get_purchase_quote",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 165
+  },
+  {
+    "name": "mcp__Vercel__get_records",
+    "invocation_name": "mcp__Vercel__get_records",
+    "shortName": "get_records",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 166
+  },
+  {
+    "name": "mcp__Vercel__get_remote_cache_status",
+    "invocation_name": "mcp__Vercel__get_remote_cache_status",
+    "shortName": "get_remote_cache_status",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 167
+  },
+  {
+    "name": "mcp__Vercel__get_rolling_release",
+    "invocation_name": "mcp__Vercel__get_rolling_release",
+    "shortName": "get_rolling_release",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 168
+  },
+  {
+    "name": "mcp__Vercel__get_rolling_release_billing_status",
+    "invocation_name": "mcp__Vercel__get_rolling_release_billing_status",
+    "shortName": "get_rolling_release_billing_status",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 169
+  },
+  {
+    "name": "mcp__Vercel__get_rolling_release_config",
+    "invocation_name": "mcp__Vercel__get_rolling_release_config",
+    "shortName": "get_rolling_release_config",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 170
+  },
+  {
+    "name": "mcp__Vercel__get_runtime_errors",
+    "invocation_name": "mcp__Vercel__get_runtime_errors",
+    "shortName": "get_runtime_errors",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 171
+  },
+  {
+    "name": "mcp__Vercel__get_runtime_logs",
+    "invocation_name": "mcp__Vercel__get_runtime_logs",
+    "shortName": "get_runtime_logs",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 172
+  },
+  {
+    "name": "mcp__Vercel__get_session",
+    "invocation_name": "mcp__Vercel__get_session",
+    "shortName": "get_session",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 173
+  },
+  {
+    "name": "mcp__Vercel__get_session_command",
+    "invocation_name": "mcp__Vercel__get_session_command",
+    "shortName": "get_session_command",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 174
+  },
+  {
+    "name": "mcp__Vercel__get_session_command_logs",
+    "invocation_name": "mcp__Vercel__get_session_command_logs",
+    "shortName": "get_session_command_logs",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 175
+  },
+  {
+    "name": "mcp__Vercel__get_session_snapshot",
+    "invocation_name": "mcp__Vercel__get_session_snapshot",
+    "shortName": "get_session_snapshot",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 176
+  },
+  {
+    "name": "mcp__Vercel__get_shared_env_var",
+    "invocation_name": "mcp__Vercel__get_shared_env_var",
+    "shortName": "get_shared_env_var",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 177
+  },
+  {
+    "name": "mcp__Vercel__get_storage_stores_by_id",
+    "invocation_name": "mcp__Vercel__get_storage_stores_by_id",
+    "shortName": "get_storage_stores_by_id",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 178
+  },
+  {
+    "name": "mcp__Vercel__get_team",
+    "invocation_name": "mcp__Vercel__get_team",
+    "shortName": "get_team",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 179
+  },
+  {
+    "name": "mcp__Vercel__get_tld",
+    "invocation_name": "mcp__Vercel__get_tld",
+    "shortName": "get_tld",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 180
+  },
+  {
+    "name": "mcp__Vercel__get_tld_price",
+    "invocation_name": "mcp__Vercel__get_tld_price",
+    "shortName": "get_tld_price",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 181
+  },
+  {
+    "name": "mcp__Vercel__get_toolbar_thread",
+    "invocation_name": "mcp__Vercel__get_toolbar_thread",
+    "shortName": "get_toolbar_thread",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 182
+  },
+  {
+    "name": "mcp__Vercel__get_vercel_ci_invocation",
+    "invocation_name": "mcp__Vercel__get_vercel_ci_invocation",
+    "shortName": "get_vercel_ci_invocation",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 183
+  },
+  {
+    "name": "mcp__Vercel__get_vercel_ci_invocation_logs",
+    "invocation_name": "mcp__Vercel__get_vercel_ci_invocation_logs",
+    "shortName": "get_vercel_ci_invocation_logs",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 184
+  },
+  {
+    "name": "mcp__Vercel__get_vercel_ci_invocation_tree",
+    "invocation_name": "mcp__Vercel__get_vercel_ci_invocation_tree",
+    "shortName": "get_vercel_ci_invocation_tree",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 185
+  },
+  {
+    "name": "mcp__Vercel__get_vercel_ci_job_definition",
+    "invocation_name": "mcp__Vercel__get_vercel_ci_job_definition",
+    "shortName": "get_vercel_ci_job_definition",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 186
+  },
+  {
+    "name": "mcp__Vercel__get_vercel_ci_job_run",
+    "invocation_name": "mcp__Vercel__get_vercel_ci_job_run",
+    "shortName": "get_vercel_ci_job_run",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 187
+  },
+  {
+    "name": "mcp__Vercel__get_vercel_ci_job_run_logs",
+    "invocation_name": "mcp__Vercel__get_vercel_ci_job_run_logs",
+    "shortName": "get_vercel_ci_job_run_logs",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 188
+  },
+  {
+    "name": "mcp__Vercel__get_vercel_ci_task_logs",
+    "invocation_name": "mcp__Vercel__get_vercel_ci_task_logs",
+    "shortName": "get_vercel_ci_task_logs",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 189
+  },
+  {
+    "name": "mcp__Vercel__get_vercel_ci_task_run_logs",
+    "invocation_name": "mcp__Vercel__get_vercel_ci_task_run_logs",
+    "shortName": "get_vercel_ci_task_run_logs",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 190
+  },
+  {
+    "name": "mcp__Vercel__get_webhooks",
+    "invocation_name": "mcp__Vercel__get_webhooks",
+    "shortName": "get_webhooks",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 191
+  },
+  {
+    "name": "mcp__Vercel__git_namespaces",
+    "invocation_name": "mcp__Vercel__git_namespaces",
+    "shortName": "git_namespaces",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 192
+  },
+  {
+    "name": "mcp__Vercel__import-claude-design-from-url",
+    "invocation_name": "mcp__Vercel__import-claude-design-from-url",
+    "shortName": "import-claude-design-from-url",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 193
+  },
+  {
+    "name": "mcp__Vercel__invalidate_by_src_images",
+    "invocation_name": "mcp__Vercel__invalidate_by_src_images",
+    "shortName": "invalidate_by_src_images",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 194
+  },
+  {
+    "name": "mcp__Vercel__invalidate_by_tags",
+    "invocation_name": "mcp__Vercel__invalidate_by_tags",
+    "shortName": "invalidate_by_tags",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 195
+  },
+  {
+    "name": "mcp__Vercel__issue_cert",
+    "invocation_name": "mcp__Vercel__issue_cert",
+    "shortName": "issue_cert",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 196
+  },
+  {
+    "name": "mcp__Vercel__kill_session_command",
+    "invocation_name": "mcp__Vercel__kill_session_command",
+    "shortName": "kill_session_command",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 197
+  },
+  {
+    "name": "mcp__Vercel__list_access_group_members",
+    "invocation_name": "mcp__Vercel__list_access_group_members",
+    "shortName": "list_access_group_members",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 198
+  },
+  {
+    "name": "mcp__Vercel__list_access_group_projects",
+    "invocation_name": "mcp__Vercel__list_access_group_projects",
+    "shortName": "list_access_group_projects",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 199
+  },
+  {
+    "name": "mcp__Vercel__list_access_groups",
+    "invocation_name": "mcp__Vercel__list_access_groups",
+    "shortName": "list_access_groups",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 200
+  },
+  {
+    "name": "mcp__Vercel__list_agent_run_projects",
+    "invocation_name": "mcp__Vercel__list_agent_run_projects",
+    "shortName": "list_agent_run_projects",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 201
+  },
+  {
+    "name": "mcp__Vercel__list_agent_runs",
+    "invocation_name": "mcp__Vercel__list_agent_runs",
+    "shortName": "list_agent_runs",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 202
+  },
+  {
+    "name": "mcp__Vercel__list_aliases",
+    "invocation_name": "mcp__Vercel__list_aliases",
+    "shortName": "list_aliases",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 203
+  },
+  {
+    "name": "mcp__Vercel__list_billing_charges",
+    "invocation_name": "mcp__Vercel__list_billing_charges",
+    "shortName": "list_billing_charges",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 204
+  },
+  {
+    "name": "mcp__Vercel__list_bulk_redirect_versions",
+    "invocation_name": "mcp__Vercel__list_bulk_redirect_versions",
+    "shortName": "list_bulk_redirect_versions",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 205
+  },
+  {
+    "name": "mcp__Vercel__list_bulk_redirects",
+    "invocation_name": "mcp__Vercel__list_bulk_redirects",
+    "shortName": "list_bulk_redirects",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 206
+  },
+  {
+    "name": "mcp__Vercel__list_certs",
+    "invocation_name": "mcp__Vercel__list_certs",
+    "shortName": "list_certs",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 207
+  },
+  {
+    "name": "mcp__Vercel__list_connector_project_connections",
+    "invocation_name": "mcp__Vercel__list_connector_project_connections",
+    "shortName": "list_connector_project_connections",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 208
+  },
+  {
+    "name": "mcp__Vercel__list_connectors",
+    "invocation_name": "mcp__Vercel__list_connectors",
+    "shortName": "list_connectors",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 209
+  },
+  {
+    "name": "mcp__Vercel__list_contract_commitments",
+    "invocation_name": "mcp__Vercel__list_contract_commitments",
+    "shortName": "list_contract_commitments",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 210
+  },
+  {
+    "name": "mcp__Vercel__list_deployment_aliases",
+    "invocation_name": "mcp__Vercel__list_deployment_aliases",
+    "shortName": "list_deployment_aliases",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 211
+  },
+  {
+    "name": "mcp__Vercel__list_deployment_events",
+    "invocation_name": "mcp__Vercel__list_deployment_events",
+    "shortName": "list_deployment_events",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 212
+  },
+  {
+    "name": "mcp__Vercel__list_deployment_files",
+    "invocation_name": "mcp__Vercel__list_deployment_files",
+    "shortName": "list_deployment_files",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 213
+  },
+  {
+    "name": "mcp__Vercel__list_deployments",
+    "invocation_name": "mcp__Vercel__list_deployments",
+    "shortName": "list_deployments",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 214
+  },
+  {
+    "name": "mcp__Vercel__list_domains",
+    "invocation_name": "mcp__Vercel__list_domains",
+    "shortName": "list_domains",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 215
+  },
+  {
+    "name": "mcp__Vercel__list_drains",
+    "invocation_name": "mcp__Vercel__list_drains",
+    "shortName": "list_drains",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 216
+  },
+  {
+    "name": "mcp__Vercel__list_event_types",
+    "invocation_name": "mcp__Vercel__list_event_types",
+    "shortName": "list_event_types",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 217
+  },
+  {
+    "name": "mcp__Vercel__list_feature_flag_sdk_keys",
+    "invocation_name": "mcp__Vercel__list_feature_flag_sdk_keys",
+    "shortName": "list_feature_flag_sdk_keys",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 218
+  },
+  {
+    "name": "mcp__Vercel__list_flag_segments",
+    "invocation_name": "mcp__Vercel__list_flag_segments",
+    "shortName": "list_flag_segments",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 219
+  },
+  {
+    "name": "mcp__Vercel__list_flag_versions",
+    "invocation_name": "mcp__Vercel__list_flag_versions",
+    "shortName": "list_flag_versions",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 220
+  },
+  {
+    "name": "mcp__Vercel__list_flags",
+    "invocation_name": "mcp__Vercel__list_flags",
+    "shortName": "list_flags",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 221
+  },
+  {
+    "name": "mcp__Vercel__list_flags_v2",
+    "invocation_name": "mcp__Vercel__list_flags_v2",
+    "shortName": "list_flags_v2",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 222
+  },
+  {
+    "name": "mcp__Vercel__list_integration_billing_plans",
+    "invocation_name": "mcp__Vercel__list_integration_billing_plans",
+    "shortName": "list_integration_billing_plans",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 223
+  },
+  {
+    "name": "mcp__Vercel__list_integration_configuration_products",
+    "invocation_name": "mcp__Vercel__list_integration_configuration_products",
+    "shortName": "list_integration_configuration_products",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 224
+  },
+  {
+    "name": "mcp__Vercel__list_integration_configurations",
+    "invocation_name": "mcp__Vercel__list_integration_configurations",
+    "shortName": "list_integration_configurations",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 225
+  },
+  {
+    "name": "mcp__Vercel__list_kms_issuers",
+    "invocation_name": "mcp__Vercel__list_kms_issuers",
+    "shortName": "list_kms_issuers",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 226
+  },
+  {
+    "name": "mcp__Vercel__list_named_sandboxes",
+    "invocation_name": "mcp__Vercel__list_named_sandboxes",
+    "shortName": "list_named_sandboxes",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 227
+  },
+  {
+    "name": "mcp__Vercel__list_project_connector_connections",
+    "invocation_name": "mcp__Vercel__list_project_connector_connections",
+    "shortName": "list_project_connector_connections",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 228
+  },
+  {
+    "name": "mcp__Vercel__list_project_custom_environments",
+    "invocation_name": "mcp__Vercel__list_project_custom_environments",
+    "shortName": "list_project_custom_environments",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 229
+  },
+  {
+    "name": "mcp__Vercel__list_project_domains",
+    "invocation_name": "mcp__Vercel__list_project_domains",
+    "shortName": "list_project_domains",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 230
+  },
+  {
+    "name": "mcp__Vercel__list_project_route_versions",
+    "invocation_name": "mcp__Vercel__list_project_route_versions",
+    "shortName": "list_project_route_versions",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 231
+  },
+  {
+    "name": "mcp__Vercel__list_project_routes",
+    "invocation_name": "mcp__Vercel__list_project_routes",
+    "shortName": "list_project_routes",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 232
+  },
+  {
+    "name": "mcp__Vercel__list_projects",
+    "invocation_name": "mcp__Vercel__list_projects",
+    "shortName": "list_projects",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 233
+  },
+  {
+    "name": "mcp__Vercel__list_promote_aliases",
+    "invocation_name": "mcp__Vercel__list_promote_aliases",
+    "shortName": "list_promote_aliases",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 234
+  },
+  {
+    "name": "mcp__Vercel__list_session_commands",
+    "invocation_name": "mcp__Vercel__list_session_commands",
+    "shortName": "list_session_commands",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 235
+  },
+  {
+    "name": "mcp__Vercel__list_session_snapshots",
+    "invocation_name": "mcp__Vercel__list_session_snapshots",
+    "shortName": "list_session_snapshots",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 236
+  },
+  {
+    "name": "mcp__Vercel__list_sessions",
+    "invocation_name": "mcp__Vercel__list_sessions",
+    "shortName": "list_sessions",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 237
+  },
+  {
+    "name": "mcp__Vercel__list_supported_tlds",
+    "invocation_name": "mcp__Vercel__list_supported_tlds",
+    "shortName": "list_supported_tlds",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 238
+  },
+  {
+    "name": "mcp__Vercel__list_team_flag_settings",
+    "invocation_name": "mcp__Vercel__list_team_flag_settings",
+    "shortName": "list_team_flag_settings",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 239
+  },
+  {
+    "name": "mcp__Vercel__list_team_flags",
+    "invocation_name": "mcp__Vercel__list_team_flags",
+    "shortName": "list_team_flags",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 240
+  },
+  {
+    "name": "mcp__Vercel__list_team_flags_v2",
+    "invocation_name": "mcp__Vercel__list_team_flags_v2",
+    "shortName": "list_team_flags_v2",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 241
+  },
+  {
+    "name": "mcp__Vercel__list_team_members",
+    "invocation_name": "mcp__Vercel__list_team_members",
+    "shortName": "list_team_members",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 242
+  },
+  {
+    "name": "mcp__Vercel__list_teams",
+    "invocation_name": "mcp__Vercel__list_teams",
+    "shortName": "list_teams",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 243
+  },
+  {
+    "name": "mcp__Vercel__list_toolbar_threads",
+    "invocation_name": "mcp__Vercel__list_toolbar_threads",
+    "shortName": "list_toolbar_threads",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 244
+  },
+  {
+    "name": "mcp__Vercel__list_user_events",
+    "invocation_name": "mcp__Vercel__list_user_events",
+    "shortName": "list_user_events",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 245
+  },
+  {
+    "name": "mcp__Vercel__list_vercel_ci_invocation_attempts",
+    "invocation_name": "mcp__Vercel__list_vercel_ci_invocation_attempts",
+    "shortName": "list_vercel_ci_invocation_attempts",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 246
+  },
+  {
+    "name": "mcp__Vercel__list_vercel_ci_invocations",
+    "invocation_name": "mcp__Vercel__list_vercel_ci_invocations",
+    "shortName": "list_vercel_ci_invocations",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 247
+  },
+  {
+    "name": "mcp__Vercel__list_vercel_ci_job_definitions",
+    "invocation_name": "mcp__Vercel__list_vercel_ci_job_definitions",
+    "shortName": "list_vercel_ci_job_definitions",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 248
+  },
+  {
+    "name": "mcp__Vercel__list_vercel_ci_job_runs",
+    "invocation_name": "mcp__Vercel__list_vercel_ci_job_runs",
+    "shortName": "list_vercel_ci_job_runs",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 249
+  },
+  {
+    "name": "mcp__Vercel__list_vercel_ci_task_definitions",
+    "invocation_name": "mcp__Vercel__list_vercel_ci_task_definitions",
+    "shortName": "list_vercel_ci_task_definitions",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 250
+  },
+  {
+    "name": "mcp__Vercel__list_vercel_ci_task_runs",
+    "invocation_name": "mcp__Vercel__list_vercel_ci_task_runs",
+    "shortName": "list_vercel_ci_task_runs",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 251
+  },
+  {
+    "name": "mcp__Vercel__patch_edge_config_items",
+    "invocation_name": "mcp__Vercel__patch_edge_config_items",
+    "shortName": "patch_edge_config_items",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 252
+  },
+  {
+    "name": "mcp__Vercel__patch_url_protection_bypass",
+    "invocation_name": "mcp__Vercel__patch_url_protection_bypass",
+    "shortName": "patch_url_protection_bypass",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 253
+  },
+  {
+    "name": "mcp__Vercel__pause_project",
+    "invocation_name": "mcp__Vercel__pause_project",
+    "shortName": "pause_project",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 254
+  },
+  {
+    "name": "mcp__Vercel__put_firewall_config",
+    "invocation_name": "mcp__Vercel__put_firewall_config",
+    "shortName": "put_firewall_config",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 255
+  },
+  {
+    "name": "mcp__Vercel__read_access_group",
+    "invocation_name": "mcp__Vercel__read_access_group",
+    "shortName": "read_access_group",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 256
+  },
+  {
+    "name": "mcp__Vercel__read_access_group_project",
+    "invocation_name": "mcp__Vercel__read_access_group_project",
+    "shortName": "read_access_group_project",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 257
+  },
+  {
+    "name": "mcp__Vercel__read_session_file",
+    "invocation_name": "mcp__Vercel__read_session_file",
+    "shortName": "read_session_file",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 258
+  },
+  {
+    "name": "mcp__Vercel__record_events",
+    "invocation_name": "mcp__Vercel__record_events",
+    "shortName": "record_events",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 259
+  },
+  {
+    "name": "mcp__Vercel__replace_domain_dns_records",
+    "invocation_name": "mcp__Vercel__replace_domain_dns_records",
+    "shortName": "replace_domain_dns_records",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 260
+  },
+  {
+    "name": "mcp__Vercel__reply_to_toolbar_thread",
+    "invocation_name": "mcp__Vercel__reply_to_toolbar_thread",
+    "shortName": "reply_to_toolbar_thread",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 261
+  },
+  {
+    "name": "mcp__Vercel__request_promote",
+    "invocation_name": "mcp__Vercel__request_promote",
+    "shortName": "request_promote",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 262
+  },
+  {
+    "name": "mcp__Vercel__request_rollback",
+    "invocation_name": "mcp__Vercel__request_rollback",
+    "shortName": "request_rollback",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 263
+  },
+  {
+    "name": "mcp__Vercel__rerequest_check",
+    "invocation_name": "mcp__Vercel__rerequest_check",
+    "shortName": "rerequest_check",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 264
+  },
+  {
+    "name": "mcp__Vercel__restore_edge_config_backup",
+    "invocation_name": "mcp__Vercel__restore_edge_config_backup",
+    "shortName": "restore_edge_config_backup",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 265
+  },
+  {
+    "name": "mcp__Vercel__restore_redirects",
+    "invocation_name": "mcp__Vercel__restore_redirects",
+    "shortName": "restore_redirects",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 266
+  },
+  {
+    "name": "mcp__Vercel__retry_vercel_ci_invocation",
+    "invocation_name": "mcp__Vercel__retry_vercel_ci_invocation",
+    "shortName": "retry_vercel_ci_invocation",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 267
+  },
+  {
+    "name": "mcp__Vercel__revoke_kms_signing_key",
+    "invocation_name": "mcp__Vercel__revoke_kms_signing_key",
+    "shortName": "revoke_kms_signing_key",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 268
+  },
+  {
+    "name": "mcp__Vercel__run_session_command",
+    "invocation_name": "mcp__Vercel__run_session_command",
+    "shortName": "run_session_command",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 269
+  },
+  {
+    "name": "mcp__Vercel__search_domains",
+    "invocation_name": "mcp__Vercel__search_domains",
+    "shortName": "search_domains",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 270
+  },
+  {
+    "name": "mcp__Vercel__search_repo",
+    "invocation_name": "mcp__Vercel__search_repo",
+    "shortName": "search_repo",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 271
+  },
+  {
+    "name": "mcp__Vercel__search_vercel_documentation",
+    "invocation_name": "mcp__Vercel__search_vercel_documentation",
+    "shortName": "search_vercel_documentation",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 272
+  },
+  {
+    "name": "mcp__Vercel__stage_redirects",
+    "invocation_name": "mcp__Vercel__stage_redirects",
+    "shortName": "stage_redirects",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 273
+  },
+  {
+    "name": "mcp__Vercel__stage_routes",
+    "invocation_name": "mcp__Vercel__stage_routes",
+    "shortName": "stage_routes",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 274
+  },
+  {
+    "name": "mcp__Vercel__start_rolling_release",
+    "invocation_name": "mcp__Vercel__start_rolling_release",
+    "shortName": "start_rolling_release",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 275
+  },
+  {
+    "name": "mcp__Vercel__stop_session",
+    "invocation_name": "mcp__Vercel__stop_session",
+    "shortName": "stop_session",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 276
+  },
+  {
+    "name": "mcp__Vercel__submit_feedback",
+    "invocation_name": "mcp__Vercel__submit_feedback",
+    "shortName": "submit_feedback",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 277
+  },
+  {
+    "name": "mcp__Vercel__test_drain",
+    "invocation_name": "mcp__Vercel__test_drain",
+    "shortName": "test_drain",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 278
+  },
+  {
+    "name": "mcp__Vercel__unpause_project",
+    "invocation_name": "mcp__Vercel__unpause_project",
+    "shortName": "unpause_project",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 279
+  },
+  {
+    "name": "mcp__Vercel__update_attack_challenge_mode",
+    "invocation_name": "mcp__Vercel__update_attack_challenge_mode",
+    "shortName": "update_attack_challenge_mode",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 280
+  },
+  {
+    "name": "mcp__Vercel__update_bulk_redirect_version",
+    "invocation_name": "mcp__Vercel__update_bulk_redirect_version",
+    "shortName": "update_bulk_redirect_version",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 281
+  },
+  {
+    "name": "mcp__Vercel__update_connector",
+    "invocation_name": "mcp__Vercel__update_connector",
+    "shortName": "update_connector",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 282
+  },
+  {
+    "name": "mcp__Vercel__update_drain",
+    "invocation_name": "mcp__Vercel__update_drain",
+    "shortName": "update_drain",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 283
+  },
+  {
+    "name": "mcp__Vercel__update_edge_config",
+    "invocation_name": "mcp__Vercel__update_edge_config",
+    "shortName": "update_edge_config",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 284
+  },
+  {
+    "name": "mcp__Vercel__update_firewall_config",
+    "invocation_name": "mcp__Vercel__update_firewall_config",
+    "shortName": "update_firewall_config",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 285
+  },
+  {
+    "name": "mcp__Vercel__update_flag",
+    "invocation_name": "mcp__Vercel__update_flag",
+    "shortName": "update_flag",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 286
+  },
+  {
+    "name": "mcp__Vercel__update_flag_segment",
+    "invocation_name": "mcp__Vercel__update_flag_segment",
+    "shortName": "update_flag_segment",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 287
+  },
+  {
+    "name": "mcp__Vercel__update_flag_settings",
+    "invocation_name": "mcp__Vercel__update_flag_settings",
+    "shortName": "update_flag_settings",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 288
+  },
+  {
+    "name": "mcp__Vercel__update_kms_issuer",
+    "invocation_name": "mcp__Vercel__update_kms_issuer",
+    "shortName": "update_kms_issuer",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 289
+  },
+  {
+    "name": "mcp__Vercel__update_kms_issuer_policy",
+    "invocation_name": "mcp__Vercel__update_kms_issuer_policy",
+    "shortName": "update_kms_issuer_policy",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 290
+  },
+  {
+    "name": "mcp__Vercel__update_project",
+    "invocation_name": "mcp__Vercel__update_project",
+    "shortName": "update_project",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 291
+  },
+  {
+    "name": "mcp__Vercel__update_project_protection_bypass",
+    "invocation_name": "mcp__Vercel__update_project_protection_bypass",
+    "shortName": "update_project_protection_bypass",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 292
+  },
+  {
+    "name": "mcp__Vercel__update_record",
+    "invocation_name": "mcp__Vercel__update_record",
+    "shortName": "update_record",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 293
+  },
+  {
+    "name": "mcp__Vercel__update_rolling_release_config",
+    "invocation_name": "mcp__Vercel__update_rolling_release_config",
+    "shortName": "update_rolling_release_config",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 294
+  },
+  {
+    "name": "mcp__Vercel__update_route_versions",
+    "invocation_name": "mcp__Vercel__update_route_versions",
+    "shortName": "update_route_versions",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 295
+  },
+  {
+    "name": "mcp__Vercel__update_sandbox",
+    "invocation_name": "mcp__Vercel__update_sandbox",
+    "shortName": "update_sandbox",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 296
+  },
+  {
+    "name": "mcp__Vercel__update_session_network_policy",
+    "invocation_name": "mcp__Vercel__update_session_network_policy",
+    "shortName": "update_session_network_policy",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 297
+  },
+  {
+    "name": "mcp__Vercel__upload_artifact",
+    "invocation_name": "mcp__Vercel__upload_artifact",
+    "shortName": "upload_artifact",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 298
+  },
+  {
+    "name": "mcp__Vercel__upload_file",
+    "invocation_name": "mcp__Vercel__upload_file",
+    "shortName": "upload_file",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 299
+  },
+  {
+    "name": "mcp__Vercel__upsert_connector_project_connection",
+    "invocation_name": "mcp__Vercel__upsert_connector_project_connection",
+    "shortName": "upsert_connector_project_connection",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 300
+  },
+  {
+    "name": "mcp__Vercel__verify_project_domain",
+    "invocation_name": "mcp__Vercel__verify_project_domain",
+    "shortName": "verify_project_domain",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 301
+  },
+  {
+    "name": "mcp__Vercel__web_fetch_vercel_url",
+    "invocation_name": "mcp__Vercel__web_fetch_vercel_url",
+    "shortName": "web_fetch_vercel_url",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 302
+  },
+  {
+    "name": "mcp__Vercel__write_session_files",
+    "invocation_name": "mcp__Vercel__write_session_files",
+    "shortName": "write_session_files",
+    "group": "Vercel",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 303
+  }
+]

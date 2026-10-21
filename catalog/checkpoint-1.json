@@ -1,0 +1,610 @@
+[
+  {
+    "name": "bash_tool",
+    "invocation_name": "bash_tool",
+    "group": "Files and code",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 1
+  },
+  {
+    "name": "create_file",
+    "invocation_name": "create_file",
+    "group": "Files and code",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 2
+  },
+  {
+    "name": "str_replace",
+    "invocation_name": "str_replace",
+    "group": "Files and code",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 3
+  },
+  {
+    "name": "view",
+    "invocation_name": "view",
+    "group": "Files and code",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 4
+  },
+  {
+    "name": "present_files",
+    "invocation_name": "present_files",
+    "group": "Files and code",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 5
+  },
+  {
+    "name": "Artifact",
+    "invocation_name": "Artifact",
+    "group": "Files and code",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 6
+  },
+  {
+    "name": "web_search",
+    "invocation_name": "web_search",
+    "group": "Web and search",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 7
+  },
+  {
+    "name": "web_fetch",
+    "invocation_name": "web_fetch",
+    "group": "Web and search",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 8
+  },
+  {
+    "name": "image_search",
+    "invocation_name": "image_search",
+    "group": "Web and search",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 9
+  },
+  {
+    "name": "memory_list",
+    "invocation_name": "memory_list",
+    "group": "Memory",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 10
+  },
+  {
+    "name": "memory_read",
+    "invocation_name": "memory_read",
+    "group": "Memory",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 11
+  },
+  {
+    "name": "memory_write",
+    "invocation_name": "memory_write",
+    "group": "Memory",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 12
+  },
+  {
+    "name": "memory_append",
+    "invocation_name": "memory_append",
+    "group": "Memory",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 13
+  },
+  {
+    "name": "memory_str_replace",
+    "invocation_name": "memory_str_replace",
+    "group": "Memory",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 14
+  },
+  {
+    "name": "memory_delete",
+    "invocation_name": "memory_delete",
+    "group": "Memory",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 15
+  },
+  {
+    "name": "alarm_create_v0",
+    "invocation_name": "alarm_create_v0",
+    "group": "Phone and personal",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 16
+  },
+  {
+    "name": "timer_create_v0",
+    "invocation_name": "timer_create_v0",
+    "group": "Phone and personal",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 17
+  },
+  {
+    "name": "calendar_search_v0",
+    "invocation_name": "calendar_search_v0",
+    "group": "Phone and personal",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 18
+  },
+  {
+    "name": "event_create_v0",
+    "invocation_name": "event_create_v0",
+    "group": "Phone and personal",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 19
+  },
+  {
+    "name": "event_create_v1",
+    "invocation_name": "event_create_v1",
+    "group": "Phone and personal",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 20
+  },
+  {
+    "name": "event_update_v0",
+    "invocation_name": "event_update_v0",
+    "group": "Phone and personal",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 21
+  },
+  {
+    "name": "event_delete_v0",
+    "invocation_name": "event_delete_v0",
+    "group": "Phone and personal",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 22
+  },
+  {
+    "name": "event_search_v0",
+    "invocation_name": "event_search_v0",
+    "group": "Phone and personal",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 23
+  },
+  {
+    "name": "user_location_v0",
+    "invocation_name": "user_location_v0",
+    "group": "Phone and personal",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 24
+  },
+  {
+    "name": "user_time_v0",
+    "invocation_name": "user_time_v0",
+    "group": "Phone and personal",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 25
+  },
+  {
+    "name": "message_compose_v1",
+    "invocation_name": "message_compose_v1",
+    "group": "Phone and personal",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 26
+  },
+  {
+    "name": "places_search",
+    "invocation_name": "places_search",
+    "group": "Places and sports",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 27
+  },
+  {
+    "name": "places_map_display_v0",
+    "invocation_name": "places_map_display_v0",
+    "group": "Places and sports",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 28
+  },
+  {
+    "name": "fetch_sports_data",
+    "invocation_name": "fetch_sports_data",
+    "group": "Places and sports",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 29
+  },
+  {
+    "name": "ask_user_input_v0",
+    "invocation_name": "ask_user_input_v0",
+    "group": "UI and display",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 30
+  },
+  {
+    "name": "chart_display_v0",
+    "invocation_name": "chart_display_v0",
+    "group": "UI and display",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 31
+  },
+  {
+    "name": "recipe_display_v0",
+    "invocation_name": "recipe_display_v0",
+    "group": "UI and display",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 32
+  },
+  {
+    "name": "show_recommendation_cards",
+    "invocation_name": "show_recommendation_cards",
+    "group": "UI and display",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 33
+  },
+  {
+    "name": "mcp__visualize__read_me",
+    "invocation_name": "mcp__visualize__read_me",
+    "group": "UI and display",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 34
+  },
+  {
+    "name": "mcp__visualize__show_widget",
+    "invocation_name": "mcp__visualize__show_widget",
+    "group": "UI and display",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 35
+  },
+  {
+    "name": "search_mcp_registry",
+    "invocation_name": "search_mcp_registry",
+    "group": "Connectors",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 36
+  },
+  {
+    "name": "suggest_connectors",
+    "invocation_name": "suggest_connectors",
+    "group": "Connectors",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 37
+  },
+  {
+    "name": "tool_search",
+    "invocation_name": "tool_search",
+    "group": "Connectors",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 38
+  },
+  {
+    "name": "mcp__Claude_Docs__batch",
+    "invocation_name": "mcp__Claude_Docs__batch",
+    "group": "Claude Docs (loaded)",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 39
+  },
+  {
+    "name": "mcp__Claude_Docs__guide",
+    "invocation_name": "mcp__Claude_Docs__guide",
+    "group": "Claude Docs (loaded)",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 40
+  },
+  {
+    "name": "mcp__Claude_Docs__update",
+    "invocation_name": "mcp__Claude_Docs__update",
+    "group": "Claude Docs (loaded)",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 41
+  },
+  {
+    "name": "end_conversation",
+    "invocation_name": "end_conversation",
+    "group": "Other",
+    "section": "core",
+    "deferred": false,
+    "requiresToolSearch": false,
+    "index": 42
+  },
+  {
+    "name": "mcp__Google_Drive__copy_file",
+    "invocation_name": "mcp__Google_Drive__copy_file",
+    "shortName": "copy_file",
+    "group": "Google Drive",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 43
+  },
+  {
+    "name": "mcp__Google_Drive__create_file",
+    "invocation_name": "mcp__Google_Drive__create_file",
+    "shortName": "create_file",
+    "group": "Google Drive",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 44
+  },
+  {
+    "name": "mcp__Google_Drive__download_file_content",
+    "invocation_name": "mcp__Google_Drive__download_file_content",
+    "shortName": "download_file_content",
+    "group": "Google Drive",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 45
+  },
+  {
+    "name": "mcp__Google_Drive__get_file_metadata",
+    "invocation_name": "mcp__Google_Drive__get_file_metadata",
+    "shortName": "get_file_metadata",
+    "group": "Google Drive",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 46
+  },
+  {
+    "name": "mcp__Google_Drive__get_file_permissions",
+    "invocation_name": "mcp__Google_Drive__get_file_permissions",
+    "shortName": "get_file_permissions",
+    "group": "Google Drive",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 47
+  },
+  {
+    "name": "mcp__Google_Drive__list_recent_files",
+    "invocation_name": "mcp__Google_Drive__list_recent_files",
+    "shortName": "list_recent_files",
+    "group": "Google Drive",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 48
+  },
+  {
+    "name": "mcp__Google_Drive__read_file_content",
+    "invocation_name": "mcp__Google_Drive__read_file_content",
+    "shortName": "read_file_content",
+    "group": "Google Drive",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 49
+  },
+  {
+    "name": "mcp__Google_Drive__search_files",
+    "invocation_name": "mcp__Google_Drive__search_files",
+    "shortName": "search_files",
+    "group": "Google Drive",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 50
+  },
+  {
+    "name": "mcp__Google_Drive__share_file",
+    "invocation_name": "mcp__Google_Drive__share_file",
+    "shortName": "share_file",
+    "group": "Google Drive",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 51
+  },
+  {
+    "name": "mcp__Google_Drive__trash_file",
+    "invocation_name": "mcp__Google_Drive__trash_file",
+    "shortName": "trash_file",
+    "group": "Google Drive",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 52
+  },
+  {
+    "name": "mcp__Google_Drive__update_file",
+    "invocation_name": "mcp__Google_Drive__update_file",
+    "shortName": "update_file",
+    "group": "Google Drive",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 53
+  },
+  {
+    "name": "mcp__Claude_Docs__create",
+    "invocation_name": "mcp__Claude_Docs__create",
+    "shortName": "create",
+    "group": "Claude Docs",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 54
+  },
+  {
+    "name": "mcp__Claude_Docs__delete",
+    "invocation_name": "mcp__Claude_Docs__delete",
+    "shortName": "delete",
+    "group": "Claude Docs",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 55
+  },
+  {
+    "name": "mcp__Claude_Docs__export",
+    "invocation_name": "mcp__Claude_Docs__export",
+    "shortName": "export",
+    "group": "Claude Docs",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 56
+  },
+  {
+    "name": "mcp__Claude_Docs__query",
+    "invocation_name": "mcp__Claude_Docs__query",
+    "shortName": "query",
+    "group": "Claude Docs",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 57
+  },
+  {
+    "name": "mcp__Claude_Docs__read",
+    "invocation_name": "mcp__Claude_Docs__read",
+    "shortName": "read",
+    "group": "Claude Docs",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 58
+  },
+  {
+    "name": "mcp__Three_js_3D_Viewer__learn_threejs",
+    "invocation_name": "mcp__Three_js_3D_Viewer__learn_threejs",
+    "shortName": "learn_threejs",
+    "group": "Three.js 3D Viewer",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 59
+  },
+  {
+    "name": "mcp__Three_js_3D_Viewer__show_threejs_scene",
+    "invocation_name": "mcp__Three_js_3D_Viewer__show_threejs_scene",
+    "shortName": "show_threejs_scene",
+    "group": "Three.js 3D Viewer",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 60
+  },
+  {
+    "name": "mcp__Trimble_SketchUp__build_model",
+    "invocation_name": "mcp__Trimble_SketchUp__build_model",
+    "shortName": "build_model",
+    "group": "Trimble SketchUp",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 61
+  },
+  {
+    "name": "mcp__Trimble_SketchUp__list_skills",
+    "invocation_name": "mcp__Trimble_SketchUp__list_skills",
+    "shortName": "list_skills",
+    "group": "Trimble SketchUp",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 62
+  },
+  {
+    "name": "mcp__Trimble_SketchUp__read_skill",
+    "invocation_name": "mcp__Trimble_SketchUp__read_skill",
+    "shortName": "read_skill",
+    "group": "Trimble SketchUp",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 63
+  },
+  {
+    "name": "mcp__Trimble_SketchUp__save_model",
+    "invocation_name": "mcp__Trimble_SketchUp__save_model",
+    "shortName": "save_model",
+    "group": "Trimble SketchUp",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 64
+  },
+  {
+    "name": "mcp__Trimble_SketchUp__usage_limit_reached",
+    "invocation_name": "mcp__Trimble_SketchUp__usage_limit_reached",
+    "shortName": "usage_limit_reached",
+    "group": "Trimble SketchUp",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 65
+  }
+]
