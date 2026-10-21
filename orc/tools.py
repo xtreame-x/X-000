@@ -10,6 +10,7 @@ from orc.logger import get_logger
 from orc.openagent_bridge import (
     create_timer,
     create_alarm,
+    open_windows_clock,
     search_calendar,
     create_calendar_event,
     search_places,
@@ -227,9 +228,10 @@ def get_native_tools() -> List[Callable]:
         manage_memory,
         ui_control,
         create_or_modify_tool,
-        # OpenAgent 65-tool bridge & high-frequency tools (9 tools)
+        # OpenAgent 65-tool bridge & high-frequency tools (10 tools)
         create_timer,
         create_alarm,
+        open_windows_clock,
         search_calendar,
         create_calendar_event,
         search_places,

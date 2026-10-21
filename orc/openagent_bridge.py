@@ -122,21 +122,74 @@ def search_openagent_tools(query: str = "") -> str:
 #  HIGH-FREQUENCY NATIVE TOOL WRAPPERS
 # ══════════════════════════════════════════════════════════════════════════════
 
+def _alert_background(delay_seconds: float, title: str, message: str):
+    """Play audible chime and show Windows alert when timer/alarm triggers."""
+    import time
+    if delay_seconds > 0:
+        time.sleep(delay_seconds)
+    try:
+        import winsound
+        for _ in range(3):
+            winsound.PlaySound("SystemExclamation", winsound.SND_ALIAS)
+            time.sleep(0.3)
+    except Exception:
+        pass
+    try:
+        import subprocess
+        safe_msg = message.replace('"', "'")
+        safe_title = title.replace('"', "'")
+        ps = f'''$w = New-Object -ComObject Wscript.Shell; $w.Popup("{safe_msg}", 10, "{safe_title}", 64)'''
+        subprocess.run(['powershell', '-NoProfile', '-Command', ps], capture_output=True, timeout=12)
+    except Exception:
+        pass
+
+
+def _compute_alarm_delay(at_str: str) -> Optional[float]:
+    """Calculate delay in seconds from now until alarm time."""
+    from datetime import datetime, timedelta
+    import re
+    now = datetime.now()
+    at_clean = at_str.strip().lower()
+    m = re.match(r'^\+?(\d+)\s*([smhd])$', at_clean)
+    if m:
+        val, unit = int(m.group(1)), m.group(2)
+        mult = {'s': 1, 'm': 60, 'h': 3600, 'd': 86400}
+        return float(val * mult[unit])
+    m = re.match(r'^(\d{1,2}):(\d{2})$', at_clean)
+    if m:
+        h, mn = int(m.group(1)), int(m.group(2))
+        target = now.replace(hour=h, minute=mn, second=0, microsecond=0)
+        if target < now:
+            target += timedelta(days=1)
+        return (target - now).total_seconds()
+    return None
+
+
+def open_windows_clock() -> str:
+    """Launch the native Windows Clock app (Alarms, Timers, Stopwatch, World Clock)."""
+    import subprocess
+    subprocess.run(['cmd', '/c', 'start', 'ms-clock:'], capture_output=True)
+    return "Windows Clock app launched."
+
+
 def create_timer(seconds: int, label: str = "Timer") -> str:
-    """Start a countdown timer on the machine.
+    """Start a countdown timer on the machine with live audible chime and popup alert.
     
     Args:
-        seconds: Duration of the timer in seconds (e.g. 300 for 5 minutes).
+        seconds: Duration of the timer in seconds (e.g. 120 for 2 minutes).
         label: Label or purpose of the timer.
         
     Returns:
         Timer confirmation with end time.
     """
-    return call_openagent_tool('timer_create_v0', {'seconds': seconds, 'label': label})
+    res = call_openagent_tool('timer_create_v0', {'seconds': seconds, 'label': label})
+    import threading
+    threading.Thread(target=_alert_background, args=(seconds, "Oryn Timer", f"Timer '{label}' finished ({seconds}s)!"), daemon=True).start()
+    return res
 
 
 def create_alarm(at: str, label: str = "Alarm") -> str:
-    """Create a durable alarm for a specific time.
+    """Create a durable alarm for a specific time with live audible chime and popup alert.
     
     Args:
         at: When the alarm should ring: HH:MM (e.g. '16:50' or '04:50'), ISO 8601 (e.g. '2026-10-21T16:50:00Z'), or relative offset like '+15m'.
@@ -145,7 +198,12 @@ def create_alarm(at: str, label: str = "Alarm") -> str:
     Returns:
         Alarm confirmation.
     """
-    return call_openagent_tool('alarm_create_v0', {'at': at, 'label': label})
+    res = call_openagent_tool('alarm_create_v0', {'at': at, 'label': label})
+    delay = _compute_alarm_delay(at)
+    if delay and delay > 0:
+        import threading
+        threading.Thread(target=_alert_background, args=(delay, "Oryn Alarm", f"Alarm '{label}' is ringing!"), daemon=True).start()
+    return res
 
 
 def search_calendar(query: str = "", start: str = "", end: str = "") -> str:
