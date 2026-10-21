@@ -72,6 +72,26 @@ def call_openagent_tool(tool_name: str, arguments: Optional[Dict[str, Any]] = No
                 args = json.loads(args)
             except Exception:
                 args = {}
+
+        # Auto-alias common parameter synonyms to prevent Pydantic validation errors
+        if isinstance(args, dict):
+            args = dict(args)
+            if tool_name == 'alarm_create_v0':
+                if 'time' in args and 'at' not in args:
+                    args['at'] = args.pop('time')
+                elif 'time_iso' in args and 'at' not in args:
+                    args['at'] = args.pop('time_iso')
+            elif tool_name in ('calendar_search_v0', 'event_search_v0'):
+                if 'start_date' in args and 'start' not in args:
+                    args['start'] = args.pop('start_date')
+                if 'end_date' in args and 'end' not in args:
+                    args['end'] = args.pop('end_date')
+            elif tool_name in ('event_create_v0', 'event_create_v1'):
+                if 'start_time' in args and 'start' not in args:
+                    args['start'] = args.pop('start_time')
+                if 'end_time' in args and 'end' not in args:
+                    args['end'] = args.pop('end_time')
+
         res = tool.invoke(args, ctx)
         return res.text_content()
     except Exception as e:
@@ -115,56 +135,61 @@ def create_timer(seconds: int, label: str = "Timer") -> str:
     return call_openagent_tool('timer_create_v0', {'seconds': seconds, 'label': label})
 
 
-def create_alarm(time_iso: str, label: str = "Alarm") -> str:
+def create_alarm(at: str, label: str = "Alarm") -> str:
     """Create a durable alarm for a specific time.
     
     Args:
-        time_iso: ISO 8601 timestamp for the alarm (e.g. '2026-10-21T18:00:00Z').
+        at: When the alarm should ring: HH:MM (e.g. '16:50' or '04:50'), ISO 8601 (e.g. '2026-10-21T16:50:00Z'), or relative offset like '+15m'.
         label: Label or reason for the alarm.
         
     Returns:
         Alarm confirmation.
     """
-    return call_openagent_tool('alarm_create_v0', {'time': time_iso, 'label': label})
+    return call_openagent_tool('alarm_create_v0', {'at': at, 'label': label})
 
 
-def search_calendar(query: str, start_date: str = "", end_date: str = "") -> str:
+def search_calendar(query: str = "", start: str = "", end: str = "") -> str:
     """Search calendar events by keyword and optional date range.
     
     Args:
         query: Text search query for calendar events.
-        start_date: Optional start date ISO string (e.g. '2026-10-21').
-        end_date: Optional end date ISO string (e.g. '2026-10-22').
+        start: Optional start date ISO string (e.g. '2026-10-21').
+        end: Optional end date ISO string (e.g. '2026-10-22').
         
     Returns:
         Matching calendar events.
     """
-    args = {'query': query}
-    if start_date:
-        args['start_date'] = start_date
-    if end_date:
-        args['end_date'] = end_date
+    args = {}
+    if query:
+        args['query'] = query
+    if start:
+        args['start'] = start
+    if end:
+        args['end'] = end
     return call_openagent_tool('calendar_search_v0', args)
 
 
-def create_calendar_event(title: str, start_time: str, end_time: str, description: str = "") -> str:
+def create_calendar_event(title: str, start: str, end: str = "", description: str = "", location: str = "") -> str:
     """Create a new calendar event.
     
     Args:
         title: Title/summary of the event.
-        start_time: ISO start time string.
-        end_time: ISO end time string.
+        start: ISO start time string or date.
+        end: Optional ISO end time string or date.
         description: Description or notes for the event.
+        location: Optional location of the event.
         
     Returns:
         Confirmation of event creation.
     """
-    return call_openagent_tool('event_create_v0', {
-        'title': title,
-        'start_time': start_time,
-        'end_time': end_time,
-        'description': description
-    })
+    args = {'title': title, 'start': start}
+    if end:
+        args['end'] = end
+    if description:
+        args['description'] = description
+    if location:
+        args['location'] = location
+    return call_openagent_tool('event_create_v0', args)
 
 
 def search_places(query: str, near: str = "", limit: int = 5) -> str:
