@@ -1,10 +1,10 @@
-"""A self-modifying agentic runtime with a 303-tool registry.
+"""A self-modifying agentic runtime with a 313-tool registry.
 
 Public surface::
 
     from agent import Settings, ToolContext, registry, Dispatcher
 
-The tool catalog is split into two checkpoints: the first 65 tools (everything
+The tool catalog is split into two checkpoints: the first 75 tools (everything
 except Vercel) and the final 238 Vercel tools.
 """
 from __future__ import annotations

@@ -7,7 +7,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 66
+    "index": 76
   },
   {
     "name": "mcp__Vercel__activate_kms_signing_key",
@@ -17,7 +17,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 67
+    "index": 77
   },
   {
     "name": "mcp__Vercel__add_project_domain",
@@ -27,7 +27,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 68
+    "index": 78
   },
   {
     "name": "mcp__Vercel__add_route",
@@ -37,7 +37,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 69
+    "index": 79
   },
   {
     "name": "mcp__Vercel__add_toolbar_reaction",
@@ -47,7 +47,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 70
+    "index": 80
   },
   {
     "name": "mcp__Vercel__aggregate_events",
@@ -57,7 +57,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 71
+    "index": 81
   },
   {
     "name": "mcp__Vercel__aggregate_pageviews",
@@ -67,7 +67,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 72
+    "index": 82
   },
   {
     "name": "mcp__Vercel__approve_rolling_release_stage",
@@ -77,7 +77,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 73
+    "index": 83
   },
   {
     "name": "mcp__Vercel__artifact_query",
@@ -87,7 +87,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 74
+    "index": 84
   },
   {
     "name": "mcp__Vercel__assign_alias",
@@ -97,7 +97,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 75
+    "index": 85
   },
   {
     "name": "mcp__Vercel__authorize_team_sso",
@@ -107,7 +107,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 76
+    "index": 86
   },
   {
     "name": "mcp__Vercel__buy_domain",
@@ -117,7 +117,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 77
+    "index": 87
   },
   {
     "name": "mcp__Vercel__cancel_deployment",
@@ -127,7 +127,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 78
+    "index": 88
   },
   {
     "name": "mcp__Vercel__change_toolbar_thread_resolve_status",
@@ -137,7 +137,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 79
+    "index": 89
   },
   {
     "name": "mcp__Vercel__complete_rolling_release",
@@ -147,7 +147,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 80
+    "index": 90
   },
   {
     "name": "mcp__Vercel__count_events",
@@ -157,7 +157,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 81
+    "index": 91
   },
   {
     "name": "mcp__Vercel__count_pageviews",
@@ -167,7 +167,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 82
+    "index": 92
   },
   {
     "name": "mcp__Vercel__create_deployment",
@@ -177,7 +177,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 83
+    "index": 93
   },
   {
     "name": "mcp__Vercel__create_drain",
@@ -187,7 +187,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 84
+    "index": 94
   },
   {
     "name": "mcp__Vercel__create_edge_config",
@@ -197,7 +197,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 85
+    "index": 95
   },
   {
     "name": "mcp__Vercel__create_edge_config_token",
@@ -207,7 +207,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 86
+    "index": 96
   },
   {
     "name": "mcp__Vercel__create_flag",
@@ -217,7 +217,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 87
+    "index": 97
   },
   {
     "name": "mcp__Vercel__create_git_project",
@@ -227,7 +227,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 88
+    "index": 98
   },
   {
     "name": "mcp__Vercel__create_kms_issuer",
@@ -237,7 +237,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 89
+    "index": 99
   },
   {
     "name": "mcp__Vercel__create_kms_issuer_policy",
@@ -247,7 +247,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 90
+    "index": 100
   },
   {
     "name": "mcp__Vercel__create_kms_signing_key",
@@ -257,7 +257,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 91
+    "index": 101
   },
   {
     "name": "mcp__Vercel__create_observability_query",
@@ -267,7 +267,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 92
+    "index": 102
   },
   {
     "name": "mcp__Vercel__create_or_transfer_domain",
@@ -277,7 +277,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 93
+    "index": 103
   },
   {
     "name": "mcp__Vercel__create_project",
@@ -287,7 +287,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 94
+    "index": 104
   },
   {
     "name": "mcp__Vercel__create_project_env",
@@ -297,7 +297,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 95
+    "index": 105
   },
   {
     "name": "mcp__Vercel__create_record",
@@ -307,7 +307,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 96
+    "index": 106
   },
   {
     "name": "mcp__Vercel__create_sandboxes_sessions_by_session_id_snapshot_v2",
@@ -317,7 +317,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 97
+    "index": 107
   },
   {
     "name": "mcp__Vercel__create_sandboxes_sessions_by_session_id_snapshot_v3",
@@ -327,7 +327,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 98
+    "index": 108
   },
   {
     "name": "mcp__Vercel__create_sandboxes_v2",
@@ -337,7 +337,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 99
+    "index": 109
   },
   {
     "name": "mcp__Vercel__create_sandboxes_v3",
@@ -347,7 +347,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 100
+    "index": 110
   },
   {
     "name": "mcp__Vercel__create_sandboxes_v4",
@@ -357,7 +357,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 101
+    "index": 111
   },
   {
     "name": "mcp__Vercel__create_sdk_key",
@@ -367,7 +367,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 102
+    "index": 112
   },
   {
     "name": "mcp__Vercel__create_session_directory",
@@ -377,7 +377,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 103
+    "index": 113
   },
   {
     "name": "mcp__Vercel__create_storage_stores_blob",
@@ -387,7 +387,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 104
+    "index": 114
   },
   {
     "name": "mcp__Vercel__create_trace_session",
@@ -397,7 +397,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 105
+    "index": 115
   },
   {
     "name": "mcp__Vercel__edit_project_env",
@@ -407,7 +407,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 106
+    "index": 116
   },
   {
     "name": "mcp__Vercel__edit_route",
@@ -417,7 +417,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 107
+    "index": 117
   },
   {
     "name": "mcp__Vercel__edit_toolbar_message",
@@ -427,7 +427,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 108
+    "index": 118
   },
   {
     "name": "mcp__Vercel__extend_session_timeout",
@@ -437,7 +437,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 109
+    "index": 119
   },
   {
     "name": "mcp__Vercel__filter_project_envs",
@@ -447,7 +447,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 110
+    "index": 120
   },
   {
     "name": "mcp__Vercel__generate_route",
@@ -457,7 +457,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 111
+    "index": 121
   },
   {
     "name": "mcp__Vercel__get_access_to_vercel_url",
@@ -467,7 +467,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 112
+    "index": 122
   },
   {
     "name": "mcp__Vercel__get_active_attack_status",
@@ -477,7 +477,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 113
+    "index": 123
   },
   {
     "name": "mcp__Vercel__get_agent_run",
@@ -487,7 +487,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 114
+    "index": 124
   },
   {
     "name": "mcp__Vercel__get_agent_run_trace",
@@ -497,7 +497,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 115
+    "index": 125
   },
   {
     "name": "mcp__Vercel__get_alias",
@@ -507,7 +507,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 116
+    "index": 126
   },
   {
     "name": "mcp__Vercel__get_auth_user",
@@ -517,7 +517,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 117
+    "index": 127
   },
   {
     "name": "mcp__Vercel__get_bulk_availability",
@@ -527,7 +527,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 118
+    "index": 128
   },
   {
     "name": "mcp__Vercel__get_bulk_price",
@@ -537,7 +537,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 119
+    "index": 129
   },
   {
     "name": "mcp__Vercel__get_bypass_ip",
@@ -547,7 +547,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 120
+    "index": 130
   },
   {
     "name": "mcp__Vercel__get_cert_by_id",
@@ -557,7 +557,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 121
+    "index": 131
   },
   {
     "name": "mcp__Vercel__get_configuration",
@@ -567,7 +567,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 122
+    "index": 132
   },
   {
     "name": "mcp__Vercel__get_connector",
@@ -577,7 +577,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 123
+    "index": 133
   },
   {
     "name": "mcp__Vercel__get_connector_project_connection",
@@ -587,7 +587,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 124
+    "index": 134
   },
   {
     "name": "mcp__Vercel__get_contact_info_schema",
@@ -597,7 +597,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 125
+    "index": 135
   },
   {
     "name": "mcp__Vercel__get_custom_environment",
@@ -607,7 +607,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 126
+    "index": 136
   },
   {
     "name": "mcp__Vercel__get_deployment",
@@ -617,7 +617,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 127
+    "index": 137
   },
   {
     "name": "mcp__Vercel__get_deployment_feature_flags",
@@ -627,7 +627,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 128
+    "index": 138
   },
   {
     "name": "mcp__Vercel__get_deployment_file_contents",
@@ -637,7 +637,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 129
+    "index": 139
   },
   {
     "name": "mcp__Vercel__get_domain",
@@ -647,7 +647,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 130
+    "index": 140
   },
   {
     "name": "mcp__Vercel__get_domain_availability",
@@ -657,7 +657,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 131
+    "index": 141
   },
   {
     "name": "mcp__Vercel__get_domain_config",
@@ -667,7 +667,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 132
+    "index": 142
   },
   {
     "name": "mcp__Vercel__get_domain_contact_verification",
@@ -677,7 +677,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 133
+    "index": 143
   },
   {
     "name": "mcp__Vercel__get_domain_order",
@@ -687,7 +687,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 134
+    "index": 144
   },
   {
     "name": "mcp__Vercel__get_domain_price",
@@ -697,7 +697,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 135
+    "index": 145
   },
   {
     "name": "mcp__Vercel__get_domain_project_domains",
@@ -707,7 +707,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 136
+    "index": 146
   },
   {
     "name": "mcp__Vercel__get_domain_verification_record",
@@ -717,7 +717,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 137
+    "index": 147
   },
   {
     "name": "mcp__Vercel__get_domains_records_by_record_id",
@@ -727,7 +727,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 138
+    "index": 148
   },
   {
     "name": "mcp__Vercel__get_drain",
@@ -737,7 +737,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 139
+    "index": 149
   },
   {
     "name": "mcp__Vercel__get_edge_config",
@@ -747,7 +747,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 140
+    "index": 150
   },
   {
     "name": "mcp__Vercel__get_edge_config_backup",
@@ -757,7 +757,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 141
+    "index": 151
   },
   {
     "name": "mcp__Vercel__get_edge_config_backups",
@@ -767,7 +767,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 142
+    "index": 152
   },
   {
     "name": "mcp__Vercel__get_edge_config_item",
@@ -777,7 +777,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 143
+    "index": 153
   },
   {
     "name": "mcp__Vercel__get_edge_config_items",
@@ -787,7 +787,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 144
+    "index": 154
   },
   {
     "name": "mcp__Vercel__get_edge_config_token",
@@ -797,7 +797,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 145
+    "index": 155
   },
   {
     "name": "mcp__Vercel__get_edge_config_tokens",
@@ -807,7 +807,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 146
+    "index": 156
   },
   {
     "name": "mcp__Vercel__get_edge_configs",
@@ -817,7 +817,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 147
+    "index": 157
   },
   {
     "name": "mcp__Vercel__get_firewall_config",
@@ -827,7 +827,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 148
+    "index": 158
   },
   {
     "name": "mcp__Vercel__get_flag",
@@ -837,7 +837,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 149
+    "index": 159
   },
   {
     "name": "mcp__Vercel__get_flag_segment",
@@ -847,7 +847,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 150
+    "index": 160
   },
   {
     "name": "mcp__Vercel__get_flag_settings",
@@ -857,7 +857,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 151
+    "index": 161
   },
   {
     "name": "mcp__Vercel__get_git_deployment_context",
@@ -867,7 +867,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 152
+    "index": 162
   },
   {
     "name": "mcp__Vercel__get_kms_issuer",
@@ -877,7 +877,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 153
+    "index": 163
   },
   {
     "name": "mcp__Vercel__get_microfrontends_config",
@@ -887,7 +887,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 154
+    "index": 164
   },
   {
     "name": "mcp__Vercel__get_microfrontends_config_for_project",
@@ -897,7 +897,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 155
+    "index": 165
   },
   {
     "name": "mcp__Vercel__get_named_sandbox",
@@ -907,7 +907,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 156
+    "index": 166
   },
   {
     "name": "mcp__Vercel__get_observability_configuration_projects",
@@ -917,7 +917,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 157
+    "index": 167
   },
   {
     "name": "mcp__Vercel__get_observability_schema",
@@ -927,7 +927,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 158
+    "index": 168
   },
   {
     "name": "mcp__Vercel__get_order",
@@ -937,7 +937,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 159
+    "index": 169
   },
   {
     "name": "mcp__Vercel__get_project",
@@ -947,7 +947,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 160
+    "index": 170
   },
   {
     "name": "mcp__Vercel__get_project_deletion_link",
@@ -957,7 +957,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 161
+    "index": 171
   },
   {
     "name": "mcp__Vercel__get_project_domain",
@@ -967,7 +967,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 162
+    "index": 172
   },
   {
     "name": "mcp__Vercel__get_project_env",
@@ -977,7 +977,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 163
+    "index": 173
   },
   {
     "name": "mcp__Vercel__get_project_trace",
@@ -987,7 +987,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 164
+    "index": 174
   },
   {
     "name": "mcp__Vercel__get_purchase_quote",
@@ -997,7 +997,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 165
+    "index": 175
   },
   {
     "name": "mcp__Vercel__get_records",
@@ -1007,7 +1007,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 166
+    "index": 176
   },
   {
     "name": "mcp__Vercel__get_remote_cache_status",
@@ -1017,7 +1017,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 167
+    "index": 177
   },
   {
     "name": "mcp__Vercel__get_rolling_release",
@@ -1027,7 +1027,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 168
+    "index": 178
   },
   {
     "name": "mcp__Vercel__get_rolling_release_billing_status",
@@ -1037,7 +1037,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 169
+    "index": 179
   },
   {
     "name": "mcp__Vercel__get_rolling_release_config",
@@ -1047,7 +1047,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 170
+    "index": 180
   },
   {
     "name": "mcp__Vercel__get_runtime_errors",
@@ -1057,7 +1057,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 171
+    "index": 181
   },
   {
     "name": "mcp__Vercel__get_runtime_logs",
@@ -1067,7 +1067,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 172
+    "index": 182
   },
   {
     "name": "mcp__Vercel__get_session",
@@ -1077,7 +1077,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 173
+    "index": 183
   },
   {
     "name": "mcp__Vercel__get_session_command",
@@ -1087,7 +1087,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 174
+    "index": 184
   },
   {
     "name": "mcp__Vercel__get_session_command_logs",
@@ -1097,7 +1097,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 175
+    "index": 185
   },
   {
     "name": "mcp__Vercel__get_session_snapshot",
@@ -1107,7 +1107,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 176
+    "index": 186
   },
   {
     "name": "mcp__Vercel__get_shared_env_var",
@@ -1117,7 +1117,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 177
+    "index": 187
   },
   {
     "name": "mcp__Vercel__get_storage_stores_by_id",
@@ -1127,7 +1127,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 178
+    "index": 188
   },
   {
     "name": "mcp__Vercel__get_team",
@@ -1137,7 +1137,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 179
+    "index": 189
   },
   {
     "name": "mcp__Vercel__get_tld",
@@ -1147,7 +1147,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 180
+    "index": 190
   },
   {
     "name": "mcp__Vercel__get_tld_price",
@@ -1157,7 +1157,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 181
+    "index": 191
   },
   {
     "name": "mcp__Vercel__get_toolbar_thread",
@@ -1167,7 +1167,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 182
+    "index": 192
   },
   {
     "name": "mcp__Vercel__get_vercel_ci_invocation",
@@ -1177,7 +1177,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 183
+    "index": 193
   },
   {
     "name": "mcp__Vercel__get_vercel_ci_invocation_logs",
@@ -1187,7 +1187,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 184
+    "index": 194
   },
   {
     "name": "mcp__Vercel__get_vercel_ci_invocation_tree",
@@ -1197,7 +1197,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 185
+    "index": 195
   },
   {
     "name": "mcp__Vercel__get_vercel_ci_job_definition",
@@ -1207,7 +1207,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 186
+    "index": 196
   },
   {
     "name": "mcp__Vercel__get_vercel_ci_job_run",
@@ -1217,7 +1217,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 187
+    "index": 197
   },
   {
     "name": "mcp__Vercel__get_vercel_ci_job_run_logs",
@@ -1227,7 +1227,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 188
+    "index": 198
   },
   {
     "name": "mcp__Vercel__get_vercel_ci_task_logs",
@@ -1237,7 +1237,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 189
+    "index": 199
   },
   {
     "name": "mcp__Vercel__get_vercel_ci_task_run_logs",
@@ -1247,7 +1247,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 190
+    "index": 200
   },
   {
     "name": "mcp__Vercel__get_webhooks",
@@ -1257,7 +1257,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 191
+    "index": 201
   },
   {
     "name": "mcp__Vercel__git_namespaces",
@@ -1267,7 +1267,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 192
+    "index": 202
   },
   {
     "name": "mcp__Vercel__import-claude-design-from-url",
@@ -1277,7 +1277,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 193
+    "index": 203
   },
   {
     "name": "mcp__Vercel__invalidate_by_src_images",
@@ -1287,7 +1287,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 194
+    "index": 204
   },
   {
     "name": "mcp__Vercel__invalidate_by_tags",
@@ -1297,7 +1297,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 195
+    "index": 205
   },
   {
     "name": "mcp__Vercel__issue_cert",
@@ -1307,7 +1307,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 196
+    "index": 206
   },
   {
     "name": "mcp__Vercel__kill_session_command",
@@ -1317,7 +1317,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 197
+    "index": 207
   },
   {
     "name": "mcp__Vercel__list_access_group_members",
@@ -1327,7 +1327,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 198
+    "index": 208
   },
   {
     "name": "mcp__Vercel__list_access_group_projects",
@@ -1337,7 +1337,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 199
+    "index": 209
   },
   {
     "name": "mcp__Vercel__list_access_groups",
@@ -1347,7 +1347,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 200
+    "index": 210
   },
   {
     "name": "mcp__Vercel__list_agent_run_projects",
@@ -1357,7 +1357,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 201
+    "index": 211
   },
   {
     "name": "mcp__Vercel__list_agent_runs",
@@ -1367,7 +1367,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 202
+    "index": 212
   },
   {
     "name": "mcp__Vercel__list_aliases",
@@ -1377,7 +1377,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 203
+    "index": 213
   },
   {
     "name": "mcp__Vercel__list_billing_charges",
@@ -1387,7 +1387,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 204
+    "index": 214
   },
   {
     "name": "mcp__Vercel__list_bulk_redirect_versions",
@@ -1397,7 +1397,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 205
+    "index": 215
   },
   {
     "name": "mcp__Vercel__list_bulk_redirects",
@@ -1407,7 +1407,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 206
+    "index": 216
   },
   {
     "name": "mcp__Vercel__list_certs",
@@ -1417,7 +1417,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 207
+    "index": 217
   },
   {
     "name": "mcp__Vercel__list_connector_project_connections",
@@ -1427,7 +1427,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 208
+    "index": 218
   },
   {
     "name": "mcp__Vercel__list_connectors",
@@ -1437,7 +1437,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 209
+    "index": 219
   },
   {
     "name": "mcp__Vercel__list_contract_commitments",
@@ -1447,7 +1447,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 210
+    "index": 220
   },
   {
     "name": "mcp__Vercel__list_deployment_aliases",
@@ -1457,7 +1457,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 211
+    "index": 221
   },
   {
     "name": "mcp__Vercel__list_deployment_events",
@@ -1467,7 +1467,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 212
+    "index": 222
   },
   {
     "name": "mcp__Vercel__list_deployment_files",
@@ -1477,7 +1477,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 213
+    "index": 223
   },
   {
     "name": "mcp__Vercel__list_deployments",
@@ -1487,7 +1487,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 214
+    "index": 224
   },
   {
     "name": "mcp__Vercel__list_domains",
@@ -1497,7 +1497,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 215
+    "index": 225
   },
   {
     "name": "mcp__Vercel__list_drains",
@@ -1507,7 +1507,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 216
+    "index": 226
   },
   {
     "name": "mcp__Vercel__list_event_types",
@@ -1517,7 +1517,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 217
+    "index": 227
   },
   {
     "name": "mcp__Vercel__list_feature_flag_sdk_keys",
@@ -1527,7 +1527,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 218
+    "index": 228
   },
   {
     "name": "mcp__Vercel__list_flag_segments",
@@ -1537,7 +1537,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 219
+    "index": 229
   },
   {
     "name": "mcp__Vercel__list_flag_versions",
@@ -1547,7 +1547,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 220
+    "index": 230
   },
   {
     "name": "mcp__Vercel__list_flags",
@@ -1557,7 +1557,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 221
+    "index": 231
   },
   {
     "name": "mcp__Vercel__list_flags_v2",
@@ -1567,7 +1567,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 222
+    "index": 232
   },
   {
     "name": "mcp__Vercel__list_integration_billing_plans",
@@ -1577,7 +1577,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 223
+    "index": 233
   },
   {
     "name": "mcp__Vercel__list_integration_configuration_products",
@@ -1587,7 +1587,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 224
+    "index": 234
   },
   {
     "name": "mcp__Vercel__list_integration_configurations",
@@ -1597,7 +1597,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 225
+    "index": 235
   },
   {
     "name": "mcp__Vercel__list_kms_issuers",
@@ -1607,7 +1607,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 226
+    "index": 236
   },
   {
     "name": "mcp__Vercel__list_named_sandboxes",
@@ -1617,7 +1617,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 227
+    "index": 237
   },
   {
     "name": "mcp__Vercel__list_project_connector_connections",
@@ -1627,7 +1627,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 228
+    "index": 238
   },
   {
     "name": "mcp__Vercel__list_project_custom_environments",
@@ -1637,7 +1637,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 229
+    "index": 239
   },
   {
     "name": "mcp__Vercel__list_project_domains",
@@ -1647,7 +1647,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 230
+    "index": 240
   },
   {
     "name": "mcp__Vercel__list_project_route_versions",
@@ -1657,7 +1657,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 231
+    "index": 241
   },
   {
     "name": "mcp__Vercel__list_project_routes",
@@ -1667,7 +1667,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 232
+    "index": 242
   },
   {
     "name": "mcp__Vercel__list_projects",
@@ -1677,7 +1677,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 233
+    "index": 243
   },
   {
     "name": "mcp__Vercel__list_promote_aliases",
@@ -1687,7 +1687,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 234
+    "index": 244
   },
   {
     "name": "mcp__Vercel__list_session_commands",
@@ -1697,7 +1697,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 235
+    "index": 245
   },
   {
     "name": "mcp__Vercel__list_session_snapshots",
@@ -1707,7 +1707,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 236
+    "index": 246
   },
   {
     "name": "mcp__Vercel__list_sessions",
@@ -1717,7 +1717,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 237
+    "index": 247
   },
   {
     "name": "mcp__Vercel__list_supported_tlds",
@@ -1727,7 +1727,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 238
+    "index": 248
   },
   {
     "name": "mcp__Vercel__list_team_flag_settings",
@@ -1737,7 +1737,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 239
+    "index": 249
   },
   {
     "name": "mcp__Vercel__list_team_flags",
@@ -1747,7 +1747,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 240
+    "index": 250
   },
   {
     "name": "mcp__Vercel__list_team_flags_v2",
@@ -1757,7 +1757,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 241
+    "index": 251
   },
   {
     "name": "mcp__Vercel__list_team_members",
@@ -1767,7 +1767,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 242
+    "index": 252
   },
   {
     "name": "mcp__Vercel__list_teams",
@@ -1777,7 +1777,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 243
+    "index": 253
   },
   {
     "name": "mcp__Vercel__list_toolbar_threads",
@@ -1787,7 +1787,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 244
+    "index": 254
   },
   {
     "name": "mcp__Vercel__list_user_events",
@@ -1797,7 +1797,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 245
+    "index": 255
   },
   {
     "name": "mcp__Vercel__list_vercel_ci_invocation_attempts",
@@ -1807,7 +1807,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 246
+    "index": 256
   },
   {
     "name": "mcp__Vercel__list_vercel_ci_invocations",
@@ -1817,7 +1817,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 247
+    "index": 257
   },
   {
     "name": "mcp__Vercel__list_vercel_ci_job_definitions",
@@ -1827,7 +1827,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 248
+    "index": 258
   },
   {
     "name": "mcp__Vercel__list_vercel_ci_job_runs",
@@ -1837,7 +1837,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 249
+    "index": 259
   },
   {
     "name": "mcp__Vercel__list_vercel_ci_task_definitions",
@@ -1847,7 +1847,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 250
+    "index": 260
   },
   {
     "name": "mcp__Vercel__list_vercel_ci_task_runs",
@@ -1857,7 +1857,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 251
+    "index": 261
   },
   {
     "name": "mcp__Vercel__patch_edge_config_items",
@@ -1867,7 +1867,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 252
+    "index": 262
   },
   {
     "name": "mcp__Vercel__patch_url_protection_bypass",
@@ -1877,7 +1877,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 253
+    "index": 263
   },
   {
     "name": "mcp__Vercel__pause_project",
@@ -1887,7 +1887,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 254
+    "index": 264
   },
   {
     "name": "mcp__Vercel__put_firewall_config",
@@ -1897,7 +1897,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 255
+    "index": 265
   },
   {
     "name": "mcp__Vercel__read_access_group",
@@ -1907,7 +1907,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 256
+    "index": 266
   },
   {
     "name": "mcp__Vercel__read_access_group_project",
@@ -1917,7 +1917,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 257
+    "index": 267
   },
   {
     "name": "mcp__Vercel__read_session_file",
@@ -1927,7 +1927,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 258
+    "index": 268
   },
   {
     "name": "mcp__Vercel__record_events",
@@ -1937,7 +1937,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 259
+    "index": 269
   },
   {
     "name": "mcp__Vercel__replace_domain_dns_records",
@@ -1947,7 +1947,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 260
+    "index": 270
   },
   {
     "name": "mcp__Vercel__reply_to_toolbar_thread",
@@ -1957,7 +1957,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 261
+    "index": 271
   },
   {
     "name": "mcp__Vercel__request_promote",
@@ -1967,7 +1967,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 262
+    "index": 272
   },
   {
     "name": "mcp__Vercel__request_rollback",
@@ -1977,7 +1977,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 263
+    "index": 273
   },
   {
     "name": "mcp__Vercel__rerequest_check",
@@ -1987,7 +1987,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 264
+    "index": 274
   },
   {
     "name": "mcp__Vercel__restore_edge_config_backup",
@@ -1997,7 +1997,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 265
+    "index": 275
   },
   {
     "name": "mcp__Vercel__restore_redirects",
@@ -2007,7 +2007,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 266
+    "index": 276
   },
   {
     "name": "mcp__Vercel__retry_vercel_ci_invocation",
@@ -2017,7 +2017,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 267
+    "index": 277
   },
   {
     "name": "mcp__Vercel__revoke_kms_signing_key",
@@ -2027,7 +2027,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 268
+    "index": 278
   },
   {
     "name": "mcp__Vercel__run_session_command",
@@ -2037,7 +2037,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 269
+    "index": 279
   },
   {
     "name": "mcp__Vercel__search_domains",
@@ -2047,7 +2047,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 270
+    "index": 280
   },
   {
     "name": "mcp__Vercel__search_repo",
@@ -2057,7 +2057,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 271
+    "index": 281
   },
   {
     "name": "mcp__Vercel__search_vercel_documentation",
@@ -2067,7 +2067,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 272
+    "index": 282
   },
   {
     "name": "mcp__Vercel__stage_redirects",
@@ -2077,7 +2077,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 273
+    "index": 283
   },
   {
     "name": "mcp__Vercel__stage_routes",
@@ -2087,7 +2087,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 274
+    "index": 284
   },
   {
     "name": "mcp__Vercel__start_rolling_release",
@@ -2097,7 +2097,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 275
+    "index": 285
   },
   {
     "name": "mcp__Vercel__stop_session",
@@ -2107,7 +2107,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 276
+    "index": 286
   },
   {
     "name": "mcp__Vercel__submit_feedback",
@@ -2117,7 +2117,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 277
+    "index": 287
   },
   {
     "name": "mcp__Vercel__test_drain",
@@ -2127,7 +2127,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 278
+    "index": 288
   },
   {
     "name": "mcp__Vercel__unpause_project",
@@ -2137,7 +2137,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 279
+    "index": 289
   },
   {
     "name": "mcp__Vercel__update_attack_challenge_mode",
@@ -2147,7 +2147,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 280
+    "index": 290
   },
   {
     "name": "mcp__Vercel__update_bulk_redirect_version",
@@ -2157,7 +2157,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 281
+    "index": 291
   },
   {
     "name": "mcp__Vercel__update_connector",
@@ -2167,7 +2167,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 282
+    "index": 292
   },
   {
     "name": "mcp__Vercel__update_drain",
@@ -2177,7 +2177,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 283
+    "index": 293
   },
   {
     "name": "mcp__Vercel__update_edge_config",
@@ -2187,7 +2187,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 284
+    "index": 294
   },
   {
     "name": "mcp__Vercel__update_firewall_config",
@@ -2197,7 +2197,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 285
+    "index": 295
   },
   {
     "name": "mcp__Vercel__update_flag",
@@ -2207,7 +2207,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 286
+    "index": 296
   },
   {
     "name": "mcp__Vercel__update_flag_segment",
@@ -2217,7 +2217,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 287
+    "index": 297
   },
   {
     "name": "mcp__Vercel__update_flag_settings",
@@ -2227,7 +2227,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 288
+    "index": 298
   },
   {
     "name": "mcp__Vercel__update_kms_issuer",
@@ -2237,7 +2237,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 289
+    "index": 299
   },
   {
     "name": "mcp__Vercel__update_kms_issuer_policy",
@@ -2247,7 +2247,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 290
+    "index": 300
   },
   {
     "name": "mcp__Vercel__update_project",
@@ -2257,7 +2257,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 291
+    "index": 301
   },
   {
     "name": "mcp__Vercel__update_project_protection_bypass",
@@ -2267,7 +2267,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 292
+    "index": 302
   },
   {
     "name": "mcp__Vercel__update_record",
@@ -2277,7 +2277,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 293
+    "index": 303
   },
   {
     "name": "mcp__Vercel__update_rolling_release_config",
@@ -2287,7 +2287,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 294
+    "index": 304
   },
   {
     "name": "mcp__Vercel__update_route_versions",
@@ -2297,7 +2297,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 295
+    "index": 305
   },
   {
     "name": "mcp__Vercel__update_sandbox",
@@ -2307,7 +2307,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 296
+    "index": 306
   },
   {
     "name": "mcp__Vercel__update_session_network_policy",
@@ -2317,7 +2317,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 297
+    "index": 307
   },
   {
     "name": "mcp__Vercel__upload_artifact",
@@ -2327,7 +2327,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 298
+    "index": 308
   },
   {
     "name": "mcp__Vercel__upload_file",
@@ -2337,7 +2337,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 299
+    "index": 309
   },
   {
     "name": "mcp__Vercel__upsert_connector_project_connection",
@@ -2347,7 +2347,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 300
+    "index": 310
   },
   {
     "name": "mcp__Vercel__verify_project_domain",
@@ -2357,7 +2357,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 301
+    "index": 311
   },
   {
     "name": "mcp__Vercel__web_fetch_vercel_url",
@@ -2367,7 +2367,7 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 302
+    "index": 312
   },
   {
     "name": "mcp__Vercel__write_session_files",
@@ -2377,6 +2377,6 @@
     "section": "deferred",
     "deferred": true,
     "requiresToolSearch": true,
-    "index": 303
+    "index": 313
   }
 ]

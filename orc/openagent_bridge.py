@@ -1,11 +1,13 @@
 """
 OpenAgent Bridge for Oryn.
-Provides seamless access to the 65-tool OpenAgent suite:
-Google Drive, Timers, Alarms, Calendar, Places/Maps, Sports, Three.js 3D, and SketchUp.
+Provides seamless access to the 75-tool OpenAgent suite:
+Google Drive, Notion, Timers, Alarms, Calendar, Places/Maps, Sports, Three.js 3D, and SketchUp.
 """
 
+import importlib
 import os
 import sys
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 from dotenv import load_dotenv
@@ -60,7 +62,7 @@ def _init_openagent():
 
 
 def call_openagent_tool(tool_name: str, arguments: Optional[Dict[str, Any]] = None) -> str:
-    """Execute any tool from the 65-tool OpenAgent catalog by name."""
+    """Execute any tool from the 75-tool OpenAgent catalog by name."""
     reg, ctx = _init_openagent()
     if not reg or not ctx:
         return "error: OpenAgent tool bridge not initialized"
@@ -173,17 +175,102 @@ def call_openagent_tool(tool_name: str, arguments: Optional[Dict[str, Any]] = No
                         args['email'] = 'anyone@example.invalid'
 
         res = tool.invoke(args, ctx)
-        return res.text_content()
+        text = res.text_content()
+        if res.is_error and _login_needed(tool_name, text):
+            retried = _retry_after_login(tool, tool_name, args, ctx, text)
+            text = retried if retried is not None else _login_hint(tool_name)
+        return text
     except Exception as e:
         err_str = str(e)
         if 'NotConfigured' in type(e).__name__ or 'is not configured' in err_str:
+            if _service_for(tool_name) is not None:
+                retried = _retry_after_login(tool, tool_name, args, ctx, err_str)
+                return retried if retried is not None else _login_hint(tool_name)
             return f"[Tool Not Configured] {err_str}"
         logger.warning(f"Error calling {tool_name}: {e}")
         return f"tool execution error ({tool_name}): {e}"
 
 
+@dataclass(frozen=True)
+class _ServiceLogin:
+    """How to reconnect one credential-backed tool family."""
+
+    key: str
+    label: str
+    prefix: str
+    command: str
+    script: str
+
+
+_SERVICE_LOGINS = (
+    _ServiceLogin('drive', 'Google Drive', 'mcp__Google_Drive__', 'auth drive', 'auth_drive.bat'),
+    _ServiceLogin('notion', 'Notion', 'mcp__Notion__', 'auth notion', 'auth_notion.bat'),
+)
+
+#: Failure text that means "the credential is missing, expired or revoked".
+_LOGIN_MARKERS = (
+    'not configured',
+    'http 401',
+    'unauthorized',
+    'oauth refresh failed',
+    'invalid_grant',
+)
+
+
+def _service_for(tool_name: str) -> Optional[_ServiceLogin]:
+    for service in _SERVICE_LOGINS:
+        if tool_name.startswith(service.prefix):
+            return service
+    return None
+
+
+def _login_needed(tool_name: str, text: str) -> bool:
+    """True when a credentialed tool failed for lack of a usable token."""
+    if _service_for(tool_name) is None:
+        return False
+    lowered = text.lower()
+    return any(marker in lowered for marker in _LOGIN_MARKERS)
+
+
+def _login_hint(tool_name: str) -> str:
+    service = _service_for(tool_name)
+    label = service.label if service else 'This service'
+    command = service.command if service else 'auth'
+    script = service.script if service else 'auth_drive.bat'
+    return (
+        f"{label} needs a one-time browser sign-in. Run '{command}' in Oryn "
+        f"(or double-click {script}), then ask me again."
+    )
+
+
+def _retry_after_login(tool, tool_name: str, args: dict, ctx, failure: str) -> Optional[str]:
+    """Offer the 1-click browser login, then replay the failed call once."""
+    service = _service_for(tool_name)
+    if service is None:
+        return None
+    logger.warning(f"{tool_name} needs {service.label} sign-in: {failure[:200]}")
+    try:
+        module = importlib.import_module(f'orc.{service.key}_auth')
+    except Exception as exc:  # noqa: BLE001 - never break the tool loop
+        logger.error(f"{service.label} login helper unavailable: {exc}")
+        return None
+
+    if not module.offer_login():
+        return None
+
+    _, fresh_ctx = _init_openagent()
+    ctx = fresh_ctx or ctx
+    try:
+        return tool.invoke(args, ctx).text_content()
+    except Exception as exc:  # noqa: BLE001
+        if 'NotConfigured' in type(exc).__name__ or 'is not configured' in str(exc):
+            return f"[Tool Not Configured] {exc}"
+        logger.warning(f"{service.label} retry after login failed: {exc}")
+        return f"tool execution error ({tool_name}): {exc}"
+
+
 def search_openagent_tools(query: str = "") -> str:
-    """Search available tools in the 65-tool catalog by keyword or group."""
+    """Search available tools in the 75-tool catalog by keyword or group."""
     reg, _ = _init_openagent()
     if not reg:
         return "OpenAgent catalog unavailable"
@@ -197,7 +284,7 @@ def search_openagent_tools(query: str = "") -> str:
             matches.append(f"- {t.name} [{t.group}]: {t.description[:80]}... (args: {', '.join(props)})")
 
     if not matches:
-        return f"No tools matching '{query}' found in 65-tool catalog."
+        return f"No tools matching '{query}' found in 75-tool catalog."
     return f"Found {len(matches)} tool(s):\n" + "\n".join(matches[:15])
 
 
@@ -393,7 +480,7 @@ def google_drive_action(action: str, query_or_name: str = "", file_id: str = "",
         return f"unknown Google Drive action: {action}"
 
     if "HTTP 401" in str(res):
-        return "Google Drive error: Your access token has expired (temporary OAuth tokens expire after 1 hour). Please run auth_drive.bat to refresh it or set up permanent OAuth credentials."
+        return _login_hint('mcp__Google_Drive__')
     return res
 
 
@@ -438,7 +525,7 @@ def draft_email(to: str, subject: str, body: str) -> str:
 
 
 def openagent_execute(tool_name: str, arguments: Optional[Dict[str, Any]] = None) -> str:
-    """Execute any tool from the 65-tool OpenAgent catalog by name with optional dictionary arguments.
+    """Execute any tool from the 75-tool OpenAgent catalog by name with optional dictionary arguments.
     
     Args:
         tool_name: The exact tool name (e.g., 'mcp__Three_js_3D_Viewer__show_threejs_scene', 'places_map_display_v0', 'chart_display_v0', 'user_location_v0', 'user_time_v0').

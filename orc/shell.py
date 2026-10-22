@@ -35,9 +35,9 @@ Personality: precise, sharp, slightly dry wit, loyal. Short punchy responses. No
 
 Direct Action & Tool Use:
 - You control this machine natively through your callable tools.
-- When the user asks you to do something (inspect RAM/processes, manage files, send or draft emails via SMTP, search the web, control browser tabs, check hardware, manage timers/alarms/calendar, find places, access Google Drive, or run extended OpenAgent tools), CALL THE RELEVANT TOOL DIRECTLY.
+- When the user asks you to do something (inspect RAM/processes, manage files, send or draft emails via SMTP, search the web, control browser tabs, check hardware, manage timers/alarms/calendar, find places, access Google Drive or Notion, or run extended OpenAgent tools), CALL THE RELEVANT TOOL DIRECTLY.
 - You have callable tools to send emails directly (send_email) using configured SMTP settings, or create drafts (draft_email).
-- You have access to a 65-tool catalog: use search_openagent_tools or openagent_execute if an extended tool (SketchUp 3D, Three.js viewer, etc.) is needed.
+- You have access to a 75-tool catalog: use search_openagent_tools or openagent_execute if an extended tool (Notion, SketchUp 3D, Three.js viewer, etc.) is needed.
 - Never give manual instructions, never tell the user to open an editor, and never ask them to copy-paste commands you can execute yourself.
 - You have memory: STM (short term active notes) and LTM (long term permanent knowledge).
 - After tools execute, respond with a direct, concise message confirming results or taking the next step. Keep responses brief and punchy."""
@@ -62,6 +62,8 @@ COMMANDS = {
     "plugins":   "list installed plugins",
     "tasks":     "list background tasks",
     "voice":     "toggle voice mode",
+    "login":     "1-click browser sign-in (login drive | login notion)",
+    "auth":      "alias for login (auth drive | auth notion)",
     "provider":  "show/switch AI provider",
     "create":    "create a plugin (interactive)",
     "templates": "list tool templates",
@@ -396,6 +398,49 @@ def execute_action(act, executor=None):
 #  BUILTINS
 # ══════════════════════════════════════════════════════════════════════════════
 
+def run_notion_login():
+    """1-click Notion sign-in shared by `login notion` and `auth notion`."""
+    from orc.notion_auth import NotionAuthError, login as notion_login
+
+    print("\n\033[34m[notion]\033[0m opening Notion sign-in in your browser...")
+    print("\033[90m[notion] pick a workspace, click Allow, then come back here.\033[0m")
+    try:
+        result = notion_login(announce=lambda line: print(f"\033[90m{line}\033[0m"))
+    except NotionAuthError as exc:
+        print(f"\n\033[31m[notion]\033[0m {exc}\n")
+        return False
+    except KeyboardInterrupt:
+        print("\n\033[33m[notion]\033[0m cancelled. Nothing was changed.\n")
+        return False
+
+    workspace = result.workspace_name or "your workspace"
+    print(f"\n\033[32m[notion]\033[0m connected to {workspace}.\n")
+    return True
+
+
+def run_drive_login():
+    """1-click Google Drive sign-in shared by `login drive` and `auth drive`."""
+    from orc.drive_auth import DriveAuthError, login
+
+    print("\n\033[34m[drive]\033[0m opening Google sign-in in your browser...")
+    print("\033[90m[drive] sign in, click Allow, then come back here.\033[0m")
+    try:
+        result = login(announce=lambda line: print(f"\033[90m{line}\033[0m"))
+    except DriveAuthError as exc:
+        print(f"\n\033[31m[drive]\033[0m {exc}\n")
+        return False
+    except KeyboardInterrupt:
+        print("\n\033[33m[drive]\033[0m cancelled. Nothing was changed.\n")
+        return False
+
+    if result.has_refresh_token:
+        print("\n\033[32m[drive]\033[0m connected permanently - Drive tools will refresh on their own.\n")
+    else:
+        print("\n\033[33m[drive]\033[0m connected, but Google sent no refresh token; "
+              "access expires in about an hour.\n")
+    return True
+
+
 def handle_builtin(cmd, config, providers, voice_mgr, plugins, voice_mode_ref):
     cmd = cmd.strip().lower()
 
@@ -478,6 +523,22 @@ def handle_builtin(cmd, config, providers, voice_mgr, plugins, voice_mode_ref):
         if voice_mode_ref['active']:
             print("\033[90mspeak after each response. type 'voice' again to disable.\033[0m")
         print()
+        return True
+
+    if cmd in {
+        "login", "auth",
+        "login drive", "auth drive",
+        "drive login", "drive auth",
+        "login google", "auth google",
+    }:
+        run_drive_login()
+        return True
+
+    if cmd in {
+        "login notion", "auth notion",
+        "notion login", "notion auth",
+    }:
+        run_notion_login()
         return True
 
     if cmd == "provider":

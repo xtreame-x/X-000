@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "openagent"
 version = "0.1.0"
-description = "A self-modifying agentic AI runtime with 303 tools, cross-platform (Windows-first)."
+description = "A self-modifying agentic AI runtime with 313 tools, cross-platform (Windows-first)."
 requires-python = ">=3.10"
 dependencies = [
     "pydantic>=2.6",

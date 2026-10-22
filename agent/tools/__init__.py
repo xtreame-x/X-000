@@ -21,10 +21,11 @@ CHECKPOINT_1_MODULES = (
     "docs",
     "other",
     "drive",
+    "notion",
     "threejs",
     "sketchup",
 )
-CHECKPOINT_1_COUNT = 65
+CHECKPOINT_1_COUNT = 75
 
 #: Checkpoint 2 (the 238 Vercel tools) is registered by these modules.
 CHECKPOINT_2_MODULES: tuple[str, ...] = ("vercel",)
@@ -45,7 +46,7 @@ def load_all_tools(*, include_vercel: bool = True) -> None:
             try:
                 importlib.import_module(f"agent.tools.{module}")
             except ModuleNotFoundError:
-                # Checkpoint 2 not built yet: the 65 checkpoint-1 tools still load.
+                # Checkpoint 2 not built yet: the 75 checkpoint-1 tools still load.
                 break
     _loaded = True
 

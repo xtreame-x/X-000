@@ -12,9 +12,9 @@ from agent.tools.base import REGISTRY, split_docstring
 CATALOG = Path(__file__).resolve().parent.parent / "catalog" / "checkpoint-1.json"
 
 
-def test_registry_has_exactly_65_checked_in_tools():
-    assert len(REGISTRY) == CHECKPOINT_1_COUNT == 65
-    assert checkpoint_counts()["checkpoint1"] == 65
+def test_registry_has_exactly_75_checked_in_tools():
+    assert len(REGISTRY) == CHECKPOINT_1_COUNT == 75
+    assert checkpoint_counts()["checkpoint1"] == 75
 
 
 def test_names_match_the_catalog_exactly():
@@ -28,7 +28,7 @@ def test_deferred_flags_match_the_catalog():
     expected = {entry["name"] for entry in catalog if entry["requiresToolSearch"]}
     actual = {name for name in REGISTRY.names() if REGISTRY.get(name).requires_tool_search}
     assert actual == expected
-    assert len(actual) == 23
+    assert len(actual) == 33
 
 
 def test_group_counts_match_the_source_document():
@@ -44,6 +44,7 @@ def test_group_counts_match_the_source_document():
         "Claude Docs": 8,
         "Other": 1,
         "Google Drive": 11,
+        "Notion": 10,
         "Three.js 3D Viewer": 2,
         "Trimble SketchUp": 5,
     }
@@ -128,7 +129,7 @@ def test_deferred_tools_are_hidden_from_initial_schema_list():
     names = {schema["name"] for schema in REGISTRY.schemas()}
     assert "mcp__Google_Drive__list_recent_files" not in names
     assert "bash_tool" in names
-    assert len(names) == 65 - 23
+    assert len(names) == 75 - 33
 
 
 def test_tool_search_returns_callable_schemas(dispatcher):

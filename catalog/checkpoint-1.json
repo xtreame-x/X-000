@@ -606,5 +606,105 @@
     "deferred": true,
     "requiresToolSearch": true,
     "index": 65
+  },
+  {
+    "name": "mcp__Notion__append_blocks",
+    "invocation_name": "mcp__Notion__append_blocks",
+    "shortName": "append_blocks",
+    "group": "Notion",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 66
+  },
+  {
+    "name": "mcp__Notion__create_database",
+    "invocation_name": "mcp__Notion__create_database",
+    "shortName": "create_database",
+    "group": "Notion",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 67
+  },
+  {
+    "name": "mcp__Notion__create_page",
+    "invocation_name": "mcp__Notion__create_page",
+    "shortName": "create_page",
+    "group": "Notion",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 68
+  },
+  {
+    "name": "mcp__Notion__delete_block",
+    "invocation_name": "mcp__Notion__delete_block",
+    "shortName": "delete_block",
+    "group": "Notion",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 69
+  },
+  {
+    "name": "mcp__Notion__get_database",
+    "invocation_name": "mcp__Notion__get_database",
+    "shortName": "get_database",
+    "group": "Notion",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 70
+  },
+  {
+    "name": "mcp__Notion__query_database",
+    "invocation_name": "mcp__Notion__query_database",
+    "shortName": "query_database",
+    "group": "Notion",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 71
+  },
+  {
+    "name": "mcp__Notion__read_page",
+    "invocation_name": "mcp__Notion__read_page",
+    "shortName": "read_page",
+    "group": "Notion",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 72
+  },
+  {
+    "name": "mcp__Notion__search",
+    "invocation_name": "mcp__Notion__search",
+    "shortName": "search",
+    "group": "Notion",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 73
+  },
+  {
+    "name": "mcp__Notion__update_block",
+    "invocation_name": "mcp__Notion__update_block",
+    "shortName": "update_block",
+    "group": "Notion",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 74
+  },
+  {
+    "name": "mcp__Notion__update_page",
+    "invocation_name": "mcp__Notion__update_page",
+    "shortName": "update_page",
+    "group": "Notion",
+    "section": "deferred",
+    "deferred": true,
+    "requiresToolSearch": true,
+    "index": 75
   }
 ]

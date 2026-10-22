@@ -1,140 +1,197 @@
-"""
-Google Drive Authentication Helper for Oryn.
-Guides the user through authenticating their Google Drive and saves credentials to .env.
+"""Google Drive authentication helper for Oryn.
+
+Option 1 (and the default when run without arguments) is the 1-click flow: a
+throwaway localhost server catches Google's redirect, exchanges the code for a
+refresh token, and writes it to ``.env``. No OAuth Playground, no copy-pasting.
+
+Usage:
+    python auth_drive.py            # 1-click browser login
+    python auth_drive.py menu       # full menu (manual credentials, test, exit)
+    python auth_drive.py test       # verify the current connection
 """
 
 import os
 import sys
-import json
-import webbrowser
-import httpx
 from pathlib import Path
-from dotenv import load_dotenv
+
+import httpx
 
 ORYN_ROOT = Path(__file__).resolve().parent
+if str(ORYN_ROOT) not in sys.path:
+    sys.path.insert(0, str(ORYN_ROOT))
+
+from dotenv import load_dotenv  # noqa: E402
+
 ENV_FILE = ORYN_ROOT / ".env"
+load_dotenv(ENV_FILE, override=True)
 
-load_dotenv(ENV_FILE)
-
-def update_env(key: str, value: str):
-    """Safely append or update a key in .env."""
-    lines = []
-    found = False
-    if ENV_FILE.exists():
-        with open(ENV_FILE, "r", encoding="utf-8") as f:
-            lines = f.readlines()
-
-    new_lines = []
-    for line in lines:
-        if line.strip().startswith(f"{key}=") or line.strip().startswith(f"{key} ="):
-            new_lines.append(f"{key}={value}\n")
-            found = True
-        else:
-            new_lines.append(line)
-
-    if not found:
-        if new_lines and not new_lines[-1].endswith("\n"):
-            new_lines.append("\n")
-        new_lines.append(f"{key}={value}\n")
-
-    with open(ENV_FILE, "w", encoding="utf-8") as f:
-        f.writelines(new_lines)
-
-    os.environ[key] = value
+from orc.drive_auth import (  # noqa: E402
+    ENV_FILE as AUTH_ENV_FILE,
+    DriveAuthError,
+    has_refresh_token,
+    is_configured,
+    login,
+    update_env_file,
+)
 
 
-def test_token(token: str) -> bool:
-    """Test if a Google Drive access token is valid."""
+def drive_test_token(token: str) -> bool:
+    """Test if a Google Drive bearer token is valid."""
     try:
         headers = {"Authorization": f"Bearer {token}"}
-        resp = httpx.get("https://www.googleapis.com/drive/v3/files?pageSize=1", headers=headers, timeout=10)
-        if resp.status_code == 200:
-            return True
-        else:
-            print(f"[ERROR] Google Drive API returned HTTP {resp.status_code}: {resp.text}")
-            return False
-    except Exception as e:
-        print(f"[ERROR] Failed to connect to Google Drive: {e}")
+        resp = httpx.get(
+            "https://www.googleapis.com/drive/v3/files?pageSize=1",
+            headers=headers,
+            timeout=10,
+        )
+    except Exception as exc:  # noqa: BLE001 - reported to the user
+        print(f"[ERROR] Failed to connect to Google Drive: {exc}")
         return False
 
+    if resp.status_code == 200:
+        return True
+    print(f"[ERROR] Google Drive API returned HTTP {resp.status_code}: {resp.text[:300]}")
+    return False
 
-def main():
-    print("=" * 60)
+
+def _current_access_token() -> tuple[str | None, str | None]:
+    """Return ``(token, error)`` using Oryn's refresh-aware token resolver."""
+    try:
+        from agent.config import NotConfigured, Settings
+        from agent.tools.drive import access_token_for
+
+        return access_token_for(Settings.load(ORYN_ROOT)), None
+    except NotConfigured as exc:
+        return None, str(exc)
+    except Exception as exc:  # noqa: BLE001 - reported to the user
+        return None, f"{type(exc).__name__}: {exc}"
+
+
+def test_connection() -> bool:
+    """Verify the saved credentials against the Drive API."""
+    if not is_configured():
+        print("\n[NOTICE] No Google Drive credentials found in .env.")
+        print("Run the 1-click login (python auth_drive.py login) first.")
+        return False
+
+    print("\nUsing stored credentials...")
+    token, error = _current_access_token()
+    if not token:
+        print(f"[FAILED] {error}")
+        return False
+    if drive_test_token(token):
+        mode = "refresh token (permanent)" if has_refresh_token() else "access token (expires hourly)"
+        print(f"[SUCCESS] Google Drive connection is active via {mode}.")
+        return True
+    print("[FAILED] Existing credentials are invalid or expired.")
+    print("Run the 1-click login to replace them: python auth_drive.py login")
+    return False
+
+
+def show_status() -> None:
+    client_id = (os.environ.get("GOOGLE_CLIENT_ID") or "").strip()
+    print("\nGoogle Drive configuration:")
+    print(f"  GOOGLE_CLIENT_ID      {'set' if client_id else 'missing'}")
+    print(f"  GOOGLE_CLIENT_SECRET  {'set' if os.environ.get('GOOGLE_CLIENT_SECRET') else 'missing'}")
+    print(f"  GOOGLE_REFRESH_TOKEN  {'set (permanent)' if has_refresh_token() else 'missing'}")
+    print(f"  GOOGLE_ACCESS_TOKEN   {'set' if os.environ.get('GOOGLE_ACCESS_TOKEN') else 'missing'}")
+    if not client_id:
+        print("\n  Add a Desktop OAuth client from")
+        print("  https://console.cloud.google.com/apis/credentials using option 2.")
+
+
+def run_login() -> int:
+    print("=" * 62)
+    print("      ORYN GOOGLE DRIVE - 1-CLICK BROWSER LOGIN")
+    print("=" * 62)
+    print("\nOryn will open Google in your default browser.")
+    print("Sign in, click Allow, and Drive is connected permanently.\n")
+    try:
+        result = login(announce=print)
+    except DriveAuthError as exc:
+        print(f"\n[FAILED] {exc}")
+        print("Nothing was changed.")
+        return 1
+    except KeyboardInterrupt:
+        print("\n[CANCELLED] Login aborted. Nothing was changed.")
+        return 130
+
+    print("\n[SUCCESS] Credentials saved to .env.")
+    if result.has_refresh_token:
+        print("Oryn now has permanent Google Drive access - no more token updates.")
+    else:
+        print("Google did not return a refresh token, so access expires within an hour.")
+    print("\nVerifying the new connection...")
+    test_connection()
+    print()
+    return 0
+
+
+def enter_credentials() -> tuple[str, str] | None:
+    print("\n--- Google Cloud Console OAuth Client ---")
+    print("Create a Desktop app client at:")
+    print("  https://console.cloud.google.com/apis/credentials\n")
+    print("Enable the Google Drive API first:")
+    print("  https://console.cloud.google.com/apis/library/drive.googleapis.com\n")
+    client_id = input("Enter GOOGLE_CLIENT_ID: ").strip()
+    client_secret = input("Enter GOOGLE_CLIENT_SECRET: ").strip()
+    if not client_id or not client_secret:
+        print("[CANCELLED] Missing Client ID or Secret.")
+        return None
+
+    update_env_file(
+        {"GOOGLE_CLIENT_ID": client_id, "GOOGLE_CLIENT_SECRET": client_secret},
+        env_file=AUTH_ENV_FILE,
+    )
+    os.environ["GOOGLE_CLIENT_ID"] = client_id
+    os.environ["GOOGLE_CLIENT_SECRET"] = client_secret
+    print("\n[SAVED] Client credentials written to .env.")
+    return client_id, client_secret
+
+
+def menu() -> int:
+    print("=" * 62)
     print("       ORYN GOOGLE DRIVE AUTHENTICATION SETUP")
-    print("=" * 60)
-    print("\nGoogle Drive requires OAuth permission to create and manage files.\n")
-    print("Choose an authentication method:")
-    print("  [1] Quick Token (Via Google OAuth Playground - 30 seconds)")
-    print("  [2] Permanent Setup (Using Google Cloud Client ID & Secret)")
+    print("=" * 62)
+    print("\nChoose an authentication method:\n")
+    print("  [1] 1-Click Login (opens your browser - recommended)")
+    print("  [2] Enter Google Cloud Client ID & Secret, then log in")
     print("  [3] Test current Google Drive connection")
-    print("  [4] Exit\n")
+    print("  [4] Show configuration status")
+    print("  [5] Exit\n")
 
-    choice = input("Select [1/2/3/4]: ").strip()
+    choice = input("Select [1/2/3/4/5]: ").strip() or "1"
 
     if choice == "1":
-        print("\n--- Method 1: Google OAuth Playground ---")
-        print("1. Opening Google OAuth 2.0 Playground in your browser...")
-        playground_url = (
-            "https://developers.google.com/oauthplayground/#step1"
-            "&scopes=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.file"
-        )
-        webbrowser.open(playground_url)
-        print("2. On the webpage:")
-        print("   a. Under 'Select & authorize APIs', find 'Drive API v3' and select:")
-        print("      https://www.googleapis.com/auth/drive.file")
-        print("   b. Click the blue 'Authorize APIs' button.")
-        print("   c. Sign in with your Google account and click Continue/Allow.")
-        print("   d. Under Step 2, click 'Exchange authorization code for tokens'.")
-        print("   e. Copy the generated 'Access token' (starts with ya29...).\n")
+        return run_login()
+    if choice == "2":
+        if not enter_credentials():
+            return 1
+        return run_login()
+    if choice == "3":
+        return 0 if test_connection() else 1
+    if choice == "4":
+        show_status()
+        return 0
+    print("\nExiting setup.")
+    return 0
 
-        token = input("Paste your Access Token here: ").strip()
-        if not token:
-            print("[CANCELLED] No token entered.")
-            return
 
-        print("\nTesting token with Google Drive API...")
-        if test_token(token):
-            update_env("GOOGLE_ACCESS_TOKEN", token)
-            print("\n[SUCCESS] Token verified and saved to .env!")
-            print("Oryn can now create, search, and manage files on your Google Drive.\n")
-        else:
-            print("\n[FAILED] Token could not be verified. Please check the token and try again.")
+def main(argv: list[str] | None = None) -> int:
+    args = [a.lower() for a in (sys.argv[1:] if argv is None else argv)]
+    command = args[0] if args else "login"
+    if command in {"login", "auth", "1"}:
+        return run_login()
+    if command in {"menu", "--menu", "m"}:
+        return menu()
+    if command in {"test", "status-check"}:
+        return 0 if test_connection() else 1
+    if command in {"status", "info"}:
+        show_status()
+        return 0
+    print(__doc__)
+    return 2
 
-    elif choice == "2":
-        print("\n--- Method 2: Google Cloud Console OAuth ---")
-        print("You will need a Client ID and Client Secret from https://console.cloud.google.com/apis/credentials")
-        client_id = input("Enter GOOGLE_CLIENT_ID: ").strip()
-        client_secret = input("Enter GOOGLE_CLIENT_SECRET: ").strip()
-        if not client_id or not client_secret:
-            print("[CANCELLED] Missing Client ID or Secret.")
-            return
-
-        update_env("GOOGLE_CLIENT_ID", client_id)
-        update_env("GOOGLE_CLIENT_SECRET", client_secret)
-
-        print("\nNow generate an authorization code or refresh token.")
-        print("Visit Google OAuth Playground, click the gear icon (top right), check")
-        print("'Use your own OAuth credentials', enter your Client ID & Secret, and authorize.")
-        refresh_token = input("Enter GOOGLE_REFRESH_TOKEN: ").strip()
-        if refresh_token:
-            update_env("GOOGLE_REFRESH_TOKEN", refresh_token)
-            print("\n[SUCCESS] Client credentials and Refresh Token saved to .env!")
-        else:
-            print("[SAVED] Saved Client ID and Secret. You can add GOOGLE_REFRESH_TOKEN later.")
-
-    elif choice == "3":
-        current_token = os.environ.get("GOOGLE_ACCESS_TOKEN")
-        if not current_token:
-            print("\n[NOTICE] No GOOGLE_ACCESS_TOKEN currently set in .env.")
-        else:
-            print("\nTesting existing GOOGLE_ACCESS_TOKEN...")
-            if test_token(current_token):
-                print("[SUCCESS] Your Google Drive connection is active and working!")
-            else:
-                print("[FAILED] Existing token is invalid or expired.")
-
-    else:
-        print("\nExiting setup.")
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

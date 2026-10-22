@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Build a machine-readable catalog of the 303 tools from available_tools.md.
+"""Build a machine-readable catalog of the 313 tools from available_tools.md.
 
-Emits catalog/tools.json plus catalog/checkpoint-1.json (first 65 tools) and
+Emits catalog/tools.json plus catalog/checkpoint-1.json (first 75 tools) and
 catalog/checkpoint-2.json (remaining 238 Vercel tools). Every category count is
 asserted against the totals declared in the source document, so a dropped or
-duplicated name fails loudly instead of silently shrinking the catalog.
+duplicated name fails loudly instead of silently shrinking the catalog. The
+Notion group is an Oryn addition that postdates the source scan.
 """
 from __future__ import annotations
 
@@ -41,6 +42,11 @@ CLAUDE_DOCS_DEFERRED = ["create", "delete", "export", "query", "read"]
 THREEJS = ["learn_threejs", "show_threejs_scene"]
 
 SKETCHUP = ["build_model", "list_skills", "read_skill", "save_model", "usage_limit_reached"]
+
+NOTION = [
+    "append_blocks", "create_database", "create_page", "delete_block", "get_database",
+    "query_database", "read_page", "search", "update_block", "update_page",
+]
 
 VERCEL = [
     "accept_project_transfer_request", "activate_kms_signing_key", "add_project_domain",
@@ -123,13 +129,14 @@ VERCEL = [
 
 PREFIXES = {
     "Google Drive": "mcp__Google_Drive__",
+    "Notion": "mcp__Notion__",
     "Claude Docs": "mcp__Claude_Docs__",
     "Three.js 3D Viewer": "mcp__Three_js_3D_Viewer__",
     "Trimble SketchUp": "mcp__Trimble_SketchUp__",
     "Vercel": "mcp__Vercel__",
 }
 
-CHECKPOINT_1_SIZE = 65
+CHECKPOINT_1_SIZE = 75
 
 
 def build() -> dict:
@@ -151,6 +158,7 @@ def build() -> dict:
         "Claude Docs": CLAUDE_DOCS_DEFERRED,
         "Three.js 3D Viewer": THREEJS,
         "Trimble SketchUp": SKETCHUP,
+        "Notion": NOTION,
         "Vercel": VERCEL,
     }
     for group, names in deferred_groups.items():
@@ -178,18 +186,19 @@ def build() -> dict:
     assert len(CLAUDE_DOCS_DEFERRED) == 5, len(CLAUDE_DOCS_DEFERRED)
     assert len(THREEJS) == 2, len(THREEJS)
     assert len(SKETCHUP) == 5, len(SKETCHUP)
+    assert len(NOTION) == 10, len(NOTION)
     assert len(VERCEL) == 238, f"vercel tools: expected 238, got {len(VERCEL)}"
-    assert len(entries) == 303, f"total: expected 303, got {len(entries)}"
+    assert len(entries) == 313, f"total: expected 313, got {len(entries)}"
 
     names = [e["name"] for e in entries]
     dupes = sorted({n for n in names if names.count(n) > 1})
     assert not dupes, f"duplicate tool names: {dupes}"
 
     deferred_total = len(entries) - core_total
-    assert core_total + deferred_total == 303
+    assert core_total + deferred_total == 313
 
     return {
-        "source": "available_tools.md (scan: 2026-10-20)",
+        "source": "available_tools.md (scan: 2026-10-20) + Notion tools (2026-10-22)",
         "totals": {
             "core": core_total,
             "deferred": deferred_total,
@@ -200,13 +209,14 @@ def build() -> dict:
                 "Claude Docs (deferred)": len(CLAUDE_DOCS_DEFERRED),
                 "Three.js 3D Viewer": len(THREEJS),
                 "Trimble SketchUp": len(SKETCHUP),
+                "Notion": len(NOTION),
                 "Vercel": len(VERCEL),
             },
         },
         "checkpoints": [
             {
                 "id": "checkpoint-1",
-                "label": "Core + Drive + Claude Docs + Three.js + SketchUp (everything except Vercel)",
+                "label": "Core + Drive + Notion + Claude Docs + Three.js + SketchUp (everything except Vercel)",
                 "range": [1, CHECKPOINT_1_SIZE],
                 "count": CHECKPOINT_1_SIZE,
             },

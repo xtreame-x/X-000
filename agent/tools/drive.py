@@ -18,7 +18,7 @@ from typing import Any, Literal
 
 import httpx
 
-from agent.config import NotConfigured
+from agent.config import NotConfigured, Settings
 from agent.tools.base import ToolContext, ToolResult, tool
 
 API = "https://www.googleapis.com/drive/v3"
@@ -37,17 +37,25 @@ _cached_token: str | None = None
 _cached_token_expires: float = 0.0
 
 
-def _access_token(ctx: ToolContext) -> str:
+def clear_token_cache() -> None:
+    """Forget the cached bearer token after a fresh browser login."""
     global _cached_token, _cached_token_expires
-    client_id = ctx.settings.secret("GOOGLE_CLIENT_ID")
-    client_secret = ctx.settings.secret("GOOGLE_CLIENT_SECRET")
-    refresh = ctx.settings.secret("GOOGLE_REFRESH_TOKEN")
+    _cached_token = None
+    _cached_token_expires = 0.0
+
+
+def access_token_for(settings: Settings) -> str:
+    """Resolve a Drive bearer token, refreshing it when a refresh token is set."""
+    global _cached_token, _cached_token_expires
+    client_id = settings.secret("GOOGLE_CLIENT_ID")
+    client_secret = settings.secret("GOOGLE_CLIENT_SECRET")
+    refresh = settings.secret("GOOGLE_REFRESH_TOKEN")
     if client_id and client_secret and refresh:
         now = time.time()
         if _cached_token and now < _cached_token_expires - 60:
             return _cached_token
         try:
-            with httpx.Client(timeout=ctx.settings.request_timeout) as client:
+            with httpx.Client(timeout=settings.request_timeout) as client:
                 response = client.post(
                     "https://oauth2.googleapis.com/token",
                     data={
@@ -70,16 +78,21 @@ def _access_token(ctx: ToolContext) -> str:
                 env_var="GOOGLE_REFRESH_TOKEN",
             ) from exc
 
-    token = ctx.settings.secret(MISSING)
+    token = settings.secret(MISSING)
     if token:
         return token
 
     raise NotConfigured(
-        "Google Drive is not configured: set GOOGLE_ACCESS_TOKEN, or "
-        "GOOGLE_CLIENT_ID + GOOGLE_CLIENT_SECRET + GOOGLE_REFRESH_TOKEN",
+        "Google Drive is not configured: run the 1-click browser login "
+        "('auth drive' in Oryn, or double-click auth_drive.bat), which saves "
+        "GOOGLE_REFRESH_TOKEN to .env",
         provider="Google Drive",
         env_var=MISSING,
     )
+
+
+def _access_token(ctx: ToolContext) -> str:
+    return access_token_for(ctx.settings)
 
 
 def _headers(ctx: ToolContext) -> dict[str, str]:
@@ -493,6 +506,8 @@ def mcp__Google_Drive__trash_file(ctx: ToolContext, file_id: str) -> ToolResult:
 
 
 __all__ = [
+    "access_token_for",
+    "clear_token_cache",
     "mcp__Google_Drive__copy_file",
     "mcp__Google_Drive__create_file",
     "mcp__Google_Drive__download_file_content",

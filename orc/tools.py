@@ -230,7 +230,7 @@ def get_native_tools() -> List[Callable]:
         manage_memory,
         ui_control,
         create_or_modify_tool,
-        # OpenAgent 65-tool bridge & high-frequency tools (12 tools)
+        # OpenAgent 75-tool bridge & high-frequency tools (12 tools)
         create_timer,
         create_alarm,
         open_windows_clock,
