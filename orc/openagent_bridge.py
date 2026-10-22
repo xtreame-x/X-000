@@ -375,20 +375,26 @@ def google_drive_action(action: str, query_or_name: str = "", file_id: str = "",
     Returns:
         Google Drive operation outcome.
     """
+    logger.info(f"Native tool google_drive_action called: {action} on {query_or_name or file_id}")
     act = action.lower().strip()
     if act == 'search':
-        return call_openagent_tool('mcp__Google_Drive__search_files', {'query': query_or_name})
+        res = call_openagent_tool('mcp__Google_Drive__search_files', {'query': query_or_name})
     elif act == 'list_recent':
-        return call_openagent_tool('mcp__Google_Drive__list_recent_files', {})
+        res = call_openagent_tool('mcp__Google_Drive__list_recent_files', {})
     elif act == 'read':
-        return call_openagent_tool('mcp__Google_Drive__read_file_content', {'file_id': file_id})
+        res = call_openagent_tool('mcp__Google_Drive__read_file_content', {'file_id': file_id})
     elif act == 'create':
-        return call_openagent_tool('mcp__Google_Drive__create_file', {'name': query_or_name, 'content': content})
+        res = call_openagent_tool('mcp__Google_Drive__create_file', {'name': query_or_name, 'content': content})
     elif act == 'update':
-        return call_openagent_tool('mcp__Google_Drive__update_file', {'file_id': file_id, 'content': content})
+        res = call_openagent_tool('mcp__Google_Drive__update_file', {'file_id': file_id, 'content': content})
     elif act == 'trash':
-        return call_openagent_tool('mcp__Google_Drive__trash_file', {'file_id': file_id})
-    return f"unknown Google Drive action: {action}"
+        res = call_openagent_tool('mcp__Google_Drive__trash_file', {'file_id': file_id})
+    else:
+        return f"unknown Google Drive action: {action}"
+
+    if "HTTP 401" in str(res):
+        return "Google Drive error: Your access token has expired (temporary OAuth tokens expire after 1 hour). Please run auth_drive.bat to refresh it or set up permanent OAuth credentials."
+    return res
 
 
 def send_email(to: str, subject: str, body: str) -> str:

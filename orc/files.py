@@ -21,7 +21,13 @@ def _size_fmt(size):
 
 def _safe_path(path):
     """Expand ~ and env vars, resolve to absolute."""
-    return str(Path(os.path.expandvars(os.path.expanduser(path))).resolve())
+    expanded = Path(os.path.expandvars(os.path.expanduser(path)))
+    if not expanded.is_absolute():
+        cwd_resolved = expanded.resolve()
+        if not cwd_resolved.exists() and (Path(ORYN_ROOT) / expanded).exists():
+            return str((Path(ORYN_ROOT) / expanded).resolve())
+        return str(cwd_resolved)
+    return str(expanded.resolve())
 
 
 # ── LEVEL 1 — Navigation ──────────────────────────────────────────────────────
