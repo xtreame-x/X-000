@@ -12,6 +12,7 @@ the dispatcher converts into a structured error the model can act on.
 from __future__ import annotations
 
 import json
+import time
 import uuid
 from typing import Any, Literal
 
@@ -32,15 +33,19 @@ EXPORTABLE = {
 }
 MISSING = "GOOGLE_ACCESS_TOKEN"
 
+_cached_token: str | None = None
+_cached_token_expires: float = 0.0
+
 
 def _access_token(ctx: ToolContext) -> str:
-    token = ctx.settings.secret(MISSING)
-    if token:
-        return token
+    global _cached_token, _cached_token_expires
     client_id = ctx.settings.secret("GOOGLE_CLIENT_ID")
     client_secret = ctx.settings.secret("GOOGLE_CLIENT_SECRET")
     refresh = ctx.settings.secret("GOOGLE_REFRESH_TOKEN")
     if client_id and client_secret and refresh:
+        now = time.time()
+        if _cached_token and now < _cached_token_expires - 60:
+            return _cached_token
         try:
             with httpx.Client(timeout=ctx.settings.request_timeout) as client:
                 response = client.post(
@@ -53,13 +58,22 @@ def _access_token(ctx: ToolContext) -> str:
                     },
                 )
                 response.raise_for_status()
-                return response.json()["access_token"]
+                data = response.json()
+                _cached_token = data["access_token"]
+                expires_in = data.get("expires_in", 3600)
+                _cached_token_expires = now + expires_in
+                return _cached_token
         except Exception as exc:  # noqa: BLE001
             raise NotConfigured(
                 f"Google OAuth refresh failed: {type(exc).__name__}: {exc}",
                 provider="Google Drive",
                 env_var="GOOGLE_REFRESH_TOKEN",
             ) from exc
+
+    token = ctx.settings.secret(MISSING)
+    if token:
+        return token
+
     raise NotConfigured(
         "Google Drive is not configured: set GOOGLE_ACCESS_TOKEN, or "
         "GOOGLE_CLIENT_ID + GOOGLE_CLIENT_SECRET + GOOGLE_REFRESH_TOKEN",
