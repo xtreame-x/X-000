@@ -8,12 +8,14 @@ import os
 import sys
 from pathlib import Path
 from typing import Dict, Any, List, Optional
+from dotenv import load_dotenv
 from orc.logger import get_logger
 
 logger = get_logger('openagent_bridge')
 
 # Ensure OpenAgent package is importable
 ORYN_ROOT = Path(__file__).resolve().parent.parent
+load_dotenv(ORYN_ROOT / '.env', override=True)
 candidate_dirs = [
     ORYN_ROOT / 'openagent' / 'agent-checkpoint-1',
     ORYN_ROOT / 'openagent',
@@ -32,7 +34,10 @@ _registry = None
 
 def _init_openagent():
     global _initialized, _ctx, _registry
+    load_dotenv(ORYN_ROOT / '.env', override=True)
     if _initialized:
+        from agent.config import Settings
+        _ctx.settings = Settings.load(ORYN_ROOT)
         return _registry, _ctx
 
     try:
@@ -384,6 +389,46 @@ def google_drive_action(action: str, query_or_name: str = "", file_id: str = "",
     elif act == 'trash':
         return call_openagent_tool('mcp__Google_Drive__trash_file', {'file_id': file_id})
     return f"unknown Google Drive action: {action}"
+
+
+def send_email(to: str, subject: str, body: str) -> str:
+    """Send an email directly to a recipient using your configured SMTP credentials (e.g. Gmail).
+    
+    Args:
+        to: The recipient's email address (e.g. 'friend@example.com').
+        subject: The subject line of the email.
+        body: The plain text email body content.
+        
+    Returns:
+        Status message confirming the email was sent or error details.
+    """
+    logger.info(f"Native tool send_email called: to={to}, subject={subject}")
+    return call_openagent_tool('message_compose_v1', {
+        'to': [to],
+        'subject': subject,
+        'body': body,
+        'send': True,
+    })
+
+
+def draft_email(to: str, subject: str, body: str) -> str:
+    """Draft an email without sending it, returning a mailto link and local draft.
+    
+    Args:
+        to: The recipient's email address (e.g. 'friend@example.com').
+        subject: The subject line of the email.
+        body: The plain text email body content.
+        
+    Returns:
+        Status message confirming the draft was created.
+    """
+    logger.info(f"Native tool draft_email called: to={to}, subject={subject}")
+    return call_openagent_tool('message_compose_v1', {
+        'to': [to],
+        'subject': subject,
+        'body': body,
+        'send': False,
+    })
 
 
 def openagent_execute(tool_name: str, arguments: Optional[Dict[str, Any]] = None) -> str:

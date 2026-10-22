@@ -16,6 +16,8 @@ from orc.openagent_bridge import (
     search_places,
     get_sports_scoreboard,
     google_drive_action,
+    send_email,
+    draft_email,
     search_openagent_tools,
     openagent_execute,
 )
@@ -228,7 +230,7 @@ def get_native_tools() -> List[Callable]:
         manage_memory,
         ui_control,
         create_or_modify_tool,
-        # OpenAgent 65-tool bridge & high-frequency tools (10 tools)
+        # OpenAgent 65-tool bridge & high-frequency tools (12 tools)
         create_timer,
         create_alarm,
         open_windows_clock,
@@ -237,6 +239,8 @@ def get_native_tools() -> List[Callable]:
         search_places,
         get_sports_scoreboard,
         google_drive_action,
+        send_email,
+        draft_email,
         search_openagent_tools,
         openagent_execute,
     ]
