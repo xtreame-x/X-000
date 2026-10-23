@@ -454,7 +454,7 @@
       $(".bubble", msg).textContent = text;
     } else {
       msg.innerHTML = `
-        <div class="avatar oryn" aria-hidden="true">O</div>
+        <div class="avatar oryn" aria-hidden="true"><img src="/assets/06-app-icon.svg" alt="Oryn" width="22" height="22" style="border-radius: 5px; display: block;"></div>
         <div class="msg-body"></div>`;
       const body = $(".msg-body", msg);
 
@@ -506,7 +506,7 @@
     el.className = "msg assistant";
     el.id = "typing";
     el.innerHTML = `
-      <div class="avatar oryn" aria-hidden="true">O</div>
+      <div class="avatar oryn" aria-hidden="true"><img src="/assets/06-app-icon.svg" alt="Oryn" width="22" height="22" style="border-radius: 5px; display: block;"></div>
       <div class="typing"><span class="typing-dots"><span></span><span></span><span></span></span></div>`;
     thread.appendChild(el);
     scrollChat();

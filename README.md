@@ -1,5 +1,9 @@
 # Oryn - Autonomous Windows Laptop System Agent
 
+<p align="center">
+  <img src="assets/brand/05-horizontal-wordmark-on-black.svg" alt="Oryn Logo" width="420" />
+</p>
+
 ```
   ██████╗ ██████╗ ██╗   ██╗███╗   ██╗
  ██╔═══██╗██╔══██╗╚██╗ ██╔╝████╗  ██║

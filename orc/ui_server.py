@@ -389,8 +389,12 @@ class OrynUIHandler(BaseHTTPRequestHandler):
             self._send_error_json("Not found", status=404)
             return
         if not candidate.is_file():
-            self._send_error_json("Not found", status=404)
-            return
+            alt = (UI_DIR / "assets" / unquote(relative)).resolve()
+            if alt.is_file():
+                candidate = alt
+            else:
+                self._send_error_json("Not found", status=404)
+                return
         content_type = mimetypes.guess_type(candidate.name)[0] or "application/octet-stream"
         if content_type.startswith("text/") or content_type in (
             "application/javascript",
