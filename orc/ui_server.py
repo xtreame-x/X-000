@@ -250,8 +250,8 @@ class OrynUIHandler(BaseHTTPRequestHandler):
             val = body.get("value", "").strip()
             allowed = ("NOTION_TOKEN", "GOOGLE_ACCESS_TOKEN", "GOOGLE_REFRESH_TOKEN", "GEMINI_API_KEY")
             if key in allowed and val:
-                from auth_drive import update_env
-                update_env(key, val)
+                from orc.oauth import persist_env
+                persist_env({key: val})
                 self._send_json({"ok": True, "message": f"{key} saved to .env"})
             else:
                 self._send_json({"ok": False, "error": "Invalid key or empty value"}, status=400)

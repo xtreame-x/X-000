@@ -35,6 +35,11 @@ from orc.drive_auth import (  # noqa: E402
 )
 
 
+def update_env(key: str, value: str) -> None:
+    from orc.oauth import persist_env
+    persist_env({key: value})
+
+
 def drive_test_token(token: str) -> bool:
     """Test if a Google Drive bearer token is valid."""
     try:
