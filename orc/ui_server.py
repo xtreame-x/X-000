@@ -226,7 +226,15 @@ class OrynUIHandler(BaseHTTPRequestHandler):
             self._send_json({"status": "started", "message": "Browser opened for Google Drive authorization"})
 
         elif path == "/api/auth/notion":
-            # Launch 1-click Notion login in background
+            client_id = (os.environ.get("NOTION_CLIENT_ID") or "").strip()
+            client_secret = (os.environ.get("NOTION_CLIENT_SECRET") or "").strip()
+            if not client_id or not client_secret:
+                self._send_json({
+                    "status": "missing_credentials",
+                    "message": "Notion OAuth requires NOTION_CLIENT_ID and NOTION_CLIENT_SECRET. You can also paste an Internal Integration Token (NOTION_TOKEN)."
+                })
+                return
+
             def run_auth_notion():
                 try:
                     from orc.notion_auth import login
@@ -236,6 +244,17 @@ class OrynUIHandler(BaseHTTPRequestHandler):
 
             threading.Thread(target=run_auth_notion, daemon=True).start()
             self._send_json({"status": "started", "message": "Browser opened for Notion authorization"})
+
+        elif path == "/api/save_token":
+            key = body.get("key", "").strip()
+            val = body.get("value", "").strip()
+            allowed = ("NOTION_TOKEN", "GOOGLE_ACCESS_TOKEN", "GOOGLE_REFRESH_TOKEN", "GEMINI_API_KEY")
+            if key in allowed and val:
+                from auth_drive import update_env
+                update_env(key, val)
+                self._send_json({"ok": True, "message": f"{key} saved to .env"})
+            else:
+                self._send_json({"ok": False, "error": "Invalid key or empty value"}, status=400)
 
         elif path == "/api/test/drive":
             from orc.openagent_bridge import google_drive_action
@@ -862,8 +881,23 @@ INDEX_HTML = """<!DOCTYPE html>
 
     // 1-Click Connect Notion
     async function connectNotion() {
-      alert("Opening Notion sign-in in your browser. Select your workspace and click Allow.");
-      await fetch('/api/auth/notion', { method: 'POST' });
+      const res = await fetch('/api/auth/notion', { method: 'POST' });
+      const data = await res.json();
+      if (data.status === 'missing_credentials') {
+        const token = prompt("To connect Notion, enter your Notion Token (secret_... or ntn_... from https://www.notion.so/my-integrations):");
+        if (token && token.trim()) {
+          const saveRes = await fetch('/api/save_token', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ key: 'NOTION_TOKEN', value: token.trim() })
+          });
+          const saveData = await saveRes.json();
+          alert(saveData.ok ? "✅ Notion connected successfully!" : "Error: " + saveData.error);
+          updateStatus();
+        }
+      } else {
+        alert("Opening Notion sign-in in your browser. Select your workspace and click Allow.");
+      }
     }
 
     // Test Google Drive
