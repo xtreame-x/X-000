@@ -12,6 +12,9 @@ PyYAML>=6.0
 keyboard>=0.13.5
 pyautogui>=0.9.54
 
+# Desktop dashboard window (optional: falls back to Edge app mode, then browser)
+pywebview>=5.0
+
 # Web Search
 duckduckgo-search>=5.0
 

@@ -7,7 +7,7 @@
  ██║   ██║██╔══██╗  ╚██╔╝  ██║╚██╗██║
  ╚██████╔╝██║  ██║   ██║   ██║ ╚████║
   ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═══╝
-  system agent v0.2  |  autonomous & loyal
+  system agent v0.3  |  autonomous & loyal
 ```
 
 **Oryn** is an autonomous personal system agent designed to natively monitor, control, and operate your Windows laptop through modern agentic tool use. Powered by Google Gemini on the Free Tier with zero-overhead native function calling, Oryn executes tasks directly rather than giving manual instructions.
@@ -18,7 +18,8 @@
 
 - **Native Agentic Architecture**: Uses native typed function calling (Automatic Function Calling via `google-genai`). Eliminates token-wasting legacy `[MSG] + [ACT]` string tags.
 - **Optimized for Gemini Free Tier**: Built-in sliding-window rate pacing (max 14 RPM) with inter-request spacing, retry backoff, and automatic failover from `gemini-3.8-flash` to `gemini-3.5-flash-lite` during high-demand spikes.
-- **75-Tool OpenAgent Suite**: Integrated tool catalog including Durability Timers, Alarms, Calendar events, Places search (OpenStreetMap Nominatim), Live Sports Scoreboards (ESPN), Google Drive and Notion actions, Three.js 3D Viewer, and Trimble SketchUp.
+- **313-Tool OpenAgent Catalog**: Searchable tool catalog (75-tool active checkpoint) including Durability Timers, Alarms, Calendar events, Places search (OpenStreetMap Nominatim), Live Sports Scoreboards (ESPN), Google Drive and Notion actions, Three.js 3D Viewer, and Trimble SketchUp.
+- **Desktop Dashboard**: A polished control center with chat, one-click connections, a searchable tool browser, live telemetry and a real settings screen for models, memory, voice, hotkeys and credentials — with dark and light themes.
 - **Native Windows Geolocation**: Hooks directly into the Windows Location Service (`Windows.Devices.Geolocation.Geolocator`) using Wi-Fi triangulation rather than imprecise IP blocks.
 - **Live System Telemetry & Control**: Inspects CPU, RAM, Disk, top memory-consuming processes, executes PowerShell commands safely, and manages processes.
 - **Memory Engine**: Persistent Short-Term Memory (STM) with auto-compression and Long-Term Memory (LTM) for user facts, habits, and preferences.
@@ -51,6 +52,34 @@ Open any Command Prompt, PowerShell, or Windows Terminal window and type:
 ```cmd
 oryn
 ```
+
+---
+
+## Desktop Dashboard
+
+Oryn also runs as a dashboard — a full control center rather than a terminal.
+
+```bat
+oryn ui
+```
+
+Double-clicking `oryn_ui.bat` does the same thing. The dashboard opens as its own
+window (native via `pywebview` when installed, otherwise an Edge/Chrome app
+window) and falls back to your browser. `python oryn_ui.py --web` forces the
+browser, and `--port 5050` changes the port.
+
+| Screen | What it does |
+| :--- | :--- |
+| **Chat** | The same tool-running agent as the CLI, with tool result cards and per-reply model and latency |
+| **Connections** | One-click Google Drive and Notion sign-in, SMTP test mail, disconnect |
+| **Tools** | Searchable 313-tool catalog with core and deferred scopes |
+| **System** | Live CPU, RAM and disk gauges plus the top memory consumers |
+| **Settings** | Model and fallback chain, memory, voice, hotkeys, location, search, plugins, updates, logging and credentials |
+
+Settings are written straight to `config.yaml` and `.env`, keeping comments and
+ordering intact. Credentials are masked in the UI and never leave the machine
+except to the provider you configured. Dark and light themes are both included,
+and the dashboard only answers requests from localhost.
 
 ---
 
@@ -101,7 +130,7 @@ queries and database creation (`mcp__Notion__*`, loaded through `tool_search`).
 
 ---
 
-## Available Native Tools (16-Tool Agentic Suite)
+## Available Native Tools
 
 | Tool | Purpose |
 | :--- | :--- |
@@ -119,8 +148,8 @@ queries and database creation (`mcp__Notion__*`, loaded through `tool_search`).
 | `search_places` | Physical locations and local places via OpenStreetMap Nominatim |
 | `get_sports_scoreboard`| Live scores, fixtures, and standings via ESPN |
 | `google_drive_action` | Search, list, read, create, update, or trash Google Drive files |
-| `search_openagent_tools`| Search the full 75-tool catalog by keyword or group |
-| `openagent_execute` | Universally invoke any tool from the 75-tool catalog dynamically |
+| `search_openagent_tools`| Search the full 313-tool catalog by keyword or group |
+| `openagent_execute` | Universally invoke any tool from the 313-tool catalog dynamically |
 
 ---
 

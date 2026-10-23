@@ -17,7 +17,7 @@ from orc.circuit_breaker import CircuitBreaker
 from orc.loop_detector import LoopDetector
 from orc.web import search as web_search
 from orc.tasks import get_manager as get_task_manager
-from orc.updater import check_update, format_update_status
+from orc.updater import check_update, format_update_status, get_version
 from orc.logger import get_logger, log_startup, log_shutdown
 from orc.providers import ProviderManager, ChatMessage
 
@@ -37,7 +37,7 @@ Direct Action & Tool Use:
 - You control this machine natively through your callable tools.
 - When the user asks you to do something (inspect RAM/processes, manage files, send or draft emails via SMTP, search the web, control browser tabs, check hardware, manage timers/alarms/calendar, find places, access Google Drive or Notion, or run extended OpenAgent tools), CALL THE RELEVANT TOOL DIRECTLY.
 - You have callable tools to send emails directly (send_email) using configured SMTP settings, or create drafts (draft_email).
-- You have access to a 75-tool catalog: use search_openagent_tools or openagent_execute if an extended tool (Notion, SketchUp 3D, Three.js viewer, etc.) is needed.
+- You have access to a 313-tool catalog: use search_openagent_tools or openagent_execute if an extended tool (Notion, SketchUp 3D, Three.js viewer, etc.) is needed.
 - Never give manual instructions, never tell the user to open an editor, and never ask them to copy-paste commands you can execute yourself.
 - You have memory: STM (short term active notes) and LTM (long term permanent knowledge).
 - After tools execute, respond with a direct, concise message confirming results or taking the next step. Keep responses brief and punchy."""
@@ -116,7 +116,7 @@ def clear_screen():
 
 
 def print_banner():
-    print("\033[34m" + BANNER + "\033[0m")
+    print("\033[34m" + BANNER.replace("v0.2", f"v{get_version()}") + "\033[0m")
     print("\033[90m" + "─" * 48 + "\033[0m")
     print("\033[34m[oryn]\033[0m online. what do you need?")
     print("\033[90m" + "─" * 48 + "\033[0m\n")

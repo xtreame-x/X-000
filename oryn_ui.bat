@@ -4,7 +4,7 @@ cd /d "%~dp0"
 
 echo.
 echo  ============================================================
-echo    LAUNCHING ORYN DASHBOARD UI
+echo    ORYN  //  DESKTOP DASHBOARD
 echo  ============================================================
 echo.
 
@@ -17,7 +17,9 @@ if errorlevel 1 (
     exit /b 1
 )
 
-python "%~dp0oryn_ui.py"
+python "%~dp0oryn_ui.py" %*
 
+echo.
+echo  Dashboard stopped.
 pause
 endlocal
