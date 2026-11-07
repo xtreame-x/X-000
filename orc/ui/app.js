@@ -499,20 +499,55 @@
     scrollChat();
   }
 
+  let thinkingInterval = null;
+
   function addTyping() {
     const thread = $("#chat-thread");
     if (!thread || $("#typing")) return;
     const el = document.createElement("div");
     el.className = "msg assistant";
     el.id = "typing";
+    const startTime = performance.now();
+
     el.innerHTML = `
       <div class="avatar oryn" aria-hidden="true"><img src="/assets/06-app-icon.svg" alt="Oryn" width="22" height="22" style="border-radius: 5px; display: block;"></div>
-      <div class="typing"><span class="typing-dots"><span></span><span></span><span></span></span></div>`;
+      <div class="thinking-container">
+        <div class="orb-wrapper" aria-hidden="true">
+          <div class="orb-ambient-glow"></div>
+          <div class="orb-core"></div>
+          <div class="orb-ring ring-1"></div>
+          <div class="orb-ring ring-2"></div>
+          <div class="orb-ring ring-3"></div>
+        </div>
+        <div class="thinking-info">
+          <div class="thinking-headline">
+            <span class="thinking-title">Thinking</span>
+            <span class="thinking-timer" id="thinking-clock">0.0s</span>
+          </div>
+          <div class="thinking-sub">Synthesizing response &amp; reasoning...</div>
+        </div>
+      </div>`;
     thread.appendChild(el);
     scrollChat();
+
+    if (thinkingInterval) clearInterval(thinkingInterval);
+    thinkingInterval = setInterval(() => {
+      const clock = $("#thinking-clock");
+      if (!clock) {
+        clearInterval(thinkingInterval);
+        thinkingInterval = null;
+        return;
+      }
+      const elapsed = ((performance.now() - startTime) / 1000).toFixed(1);
+      clock.textContent = `${elapsed}s`;
+    }, 100);
   }
 
   function removeTyping() {
+    if (thinkingInterval) {
+      clearInterval(thinkingInterval);
+      thinkingInterval = null;
+    }
     const el = $("#typing");
     if (el) el.remove();
   }
