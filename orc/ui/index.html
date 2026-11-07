@@ -12,6 +12,13 @@
 <body>
 
 <svg xmlns="http://www.w3.org/2000/svg" class="icon-sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-starburst" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a1.2 1.2 0 0 1 1.2 1.2v3.6a1.2 1.2 0 1 1-2.4 0V3.2A1.2 1.2 0 0 1 12 2zm0 14a1.2 1.2 0 0 1 1.2 1.2v3.6a1.2 1.2 0 1 1-2.4 0v-3.6A1.2 1.2 0 0 1 12 16zm10-5a1.2 1.2 0 0 1-1.2 1.2h-3.6a1.2 1.2 0 1 1 0-2.4h3.6A1.2 1.2 0 0 1 22 11zm-14 0a1.2 1.2 0 0 1-1.2 1.2H3.2a1.2 1.2 0 1 1 0-2.4h3.6A1.2 1.2 0 0 1 8 11zm11.07-6.07a1.2 1.2 0 0 1 0 1.7l-2.55 2.55a1.2 1.2 0 1 1-1.7-1.7l2.55-2.55a1.2 1.2 0 0 1 1.7 0zm-9.9 9.9a1.2 1.2 0 0 1 0 1.7l-2.55 2.55a1.2 1.2 0 1 1-1.7-1.7l2.55-2.55a1.2 1.2 0 0 1 1.7 0zm9.9 0a1.2 1.2 0 0 1-1.7 0l-2.55-2.55a1.2 1.2 0 1 1 1.7-1.7l2.55 2.55a1.2 1.2 0 0 1 0 1.7zm-9.9-9.9a1.2 1.2 0 0 1-1.7 0L4.93 4.93a1.2 1.2 0 1 1 1.7-1.7l2.55 2.55a1.2 1.2 0 0 1 0 1.7z"/></symbol>
+  <symbol id="i-claude-bot" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="8.5" cy="12" r="1.5" fill="currentColor"/><circle cx="15.5" cy="12" r="1.5" fill="currentColor"/><path d="M12 2v3M7 2v3M17 2v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-soundwave" viewBox="0 0 24 24"><path d="M4 10v4M8 6v12M12 3v18M16 8v8M20 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-projects" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="13" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="3" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="13" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+  <symbol id="i-artifacts" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M4 9h16M9 9v11" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-code-bracket" viewBox="0 0 24 24"><path d="m8 6-6 6 6 6M16 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 14.5a3 3 0 0 1-3 3H8.2L3.5 21V6a3 3 0 0 1 3-3h11a3 3 0 0 1 3 3z"/><path d="M8 9.5h8M8 13h5"/></symbol>
   <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v5M15 2v5M7 7h10v3a5 5 0 0 1-10 0zM12 15v7"/></symbol>
   <symbol id="i-tools" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
@@ -51,82 +58,126 @@
 </svg>
 
 <div class="app">
-  <aside class="rail">
-    <div class="rail-brand">
-      <div class="logo" aria-hidden="true"><img src="/assets/06-app-icon.svg" alt="Oryn Logo" width="32" height="32" style="border-radius: 7px; display: block;"></div>
-      <div class="brand-copy">
-        <div class="brand-name">ORYN</div>
-        <div class="brand-tag">System agent</div>
+    <aside class="rail">
+    <div class="rail-header">
+      <div class="rail-brand">
+        <span class="brand-name">Claude</span>
       </div>
+      <button class="rail-toggle-btn" id="rail-toggle-btn" type="button" title="Collapse sidebar" aria-label="Collapse sidebar">
+        <svg class="icon"><use href="#i-artifacts"/></svg>
+      </button>
     </div>
 
+    <button class="new-chat-btn" id="new-chat-btn" type="button" title="Start new conversation">
+      <svg class="icon"><use href="#i-plus"/></svg><span>New</span>
+    </button>
+
     <nav class="rail-nav" aria-label="Sections">
-      <button class="nav-item" data-view="chat" type="button" title="Chat" aria-label="Chat">
-        <svg class="icon"><use href="#i-chat"/></svg><span>Chat</span>
+      <button class="nav-item" data-action="search" type="button" title="Search">
+        <svg class="icon"><use href="#i-search"/></svg><span>Search</span>
       </button>
-      <button class="nav-item" data-view="connections" type="button" title="Connections" aria-label="Connections">
-        <svg class="icon"><use href="#i-plug"/></svg><span>Connections</span>
+      <button class="nav-item" data-view="connections" type="button" title="Projects">
+        <svg class="icon"><use href="#i-projects"/></svg><span>Projects</span>
       </button>
-      <button class="nav-item" data-view="tools" type="button" title="Tools" aria-label="Tools">
-        <svg class="icon"><use href="#i-tools"/></svg><span>Tools</span>
+      <button class="nav-item" data-view="tools" type="button" title="Artifacts">
+        <svg class="icon"><use href="#i-artifacts"/></svg><span>Artifacts</span>
       </button>
-      <button class="nav-item" data-view="system" type="button" title="System" aria-label="System">
-        <svg class="icon"><use href="#i-cpu"/></svg><span>System</span>
+      <button class="nav-item" data-view="system" type="button" title="Code">
+        <svg class="icon"><use href="#i-code-bracket"/></svg><span>Code</span>
+        <span class="nav-badge">Upgrade</span>
       </button>
-      <button class="nav-item" data-view="settings" type="button" title="Settings" aria-label="Settings">
-        <svg class="icon"><use href="#i-sliders"/></svg><span>Settings</span>
+      <button class="nav-item" data-view="settings" type="button" title="Customize">
+        <svg class="icon"><use href="#i-sliders"/></svg><span>Customize</span>
       </button>
     </nav>
 
+    <div class="rail-chats-section">
+      <div class="rail-chats-head">
+        <span class="rail-chats-title">Chats and tasks <svg class="icon-inline"><use href="#i-chevron"/></svg></span>
+        <button class="icon-button-subtle" type="button" title="Filter"><svg class="icon"><use href="#i-filter"/></svg></button>
+      </div>
+      <div class="rail-chats-list" id="rail-chats-list">
+        <!-- Rendered dynamically from history / topics -->
+        <div class="rail-chat-item"><span class="rail-chat-bullet">○</span><span>Greeting</span></div>
+        <div class="rail-chat-item"><span class="rail-chat-bullet">○</span><span>Launcher UX redesign for 14 inch...</span></div>
+        <div class="rail-chat-item"><span class="rail-chat-bullet">○</span><span>Untitled</span></div>
+      </div>
+    </div>
+
     <div class="rail-footer">
-      <button class="engine-card" id="engine-card" type="button" title="Open AI settings">
-        <div class="engine-top">
-          <span class="engine-label">Engine</span>
-          <span class="engine-state" id="engine-state"><span class="dot"></span>online</span>
+      <div class="user-profile-pill" id="user-profile-pill" title="Profile and settings">
+        <div class="user-avatar-circle" id="user-avatar-circle">F</div>
+        <div class="user-info">
+          <span class="user-display-name" id="user-display-name">frd · Free</span>
+          <svg class="icon-inline"><use href="#i-chevron"/></svg>
         </div>
-        <div class="engine-model" id="engine-model">connecting…</div>
-        <div class="engine-provider" id="engine-provider">—</div>
-      </button>
-      <div class="rail-meta">
-        <span>v<span id="rail-version">0.0.0</span></span>
-        <span id="rail-uptime">just started</span>
+        <button class="icon-button-subtle" id="user-expand-btn" type="button"><svg class="icon"><use href="#i-external"/></svg></button>
       </div>
     </div>
   </aside>
 
   <main class="main">
-    <header class="topbar">
-      <div class="topbar-copy">
-        <h1 id="view-title">Chat</h1>
-        <p id="view-subtitle">Your agent is online and ready.</p>
+        <header class="topbar">
+      <div class="topbar-center">
+        <div class="plan-pill" id="plan-pill">
+          <span>Free plan</span> <span class="sep">·</span> <a href="#upgrade" class="plan-link" id="plan-upgrade-link">Upgrade</a>
+        </div>
       </div>
       <div class="topbar-actions">
-        <div id="view-actions" class="view-actions"></div>
-        <div class="divider-v" aria-hidden="true"></div>
+        <button class="icon-button" id="clear-chat-btn" type="button" title="Clear chat" aria-label="Clear chat">
+          <svg class="icon"><use href="#i-trash"/></svg>
+        </button>
         <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle theme">
           <svg class="icon icon-sun"><use href="#i-sun"/></svg>
           <svg class="icon icon-moon"><use href="#i-moon"/></svg>
+        </button>
+        <button class="user-avatar-btn" id="top-user-avatar" type="button" title="Account">
+          <svg class="icon"><use href="#i-claude-bot"/></svg>
         </button>
       </div>
     </header>
 
     <div class="views">
-      <!-- CHAT -->
-      <section class="view" data-view-panel="chat" aria-label="Chat">
+            <!-- CHAT -->
+      <section class="view is-empty" data-view-panel="chat" aria-label="Chat">
         <div class="chat-scroll" id="chat-scroll">
-          <div class="chat-thread" id="chat-thread"></div>
+          <div class="chat-thread" id="chat-thread">
+            <div class="empty-state">
+              <div class="claude-hero">
+                <span class="claude-starburst">
+                  <svg class="icon-starburst" viewBox="0 0 24 24"><use href="#i-starburst"/></svg>
+                </span>
+                <h1 class="claude-greeting">Back at it, <span id="claude-user-name">frd</span></h1>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="composer-dock">
           <form class="composer" id="composer" autocomplete="off">
-            <textarea id="composer-input" rows="1" placeholder="Ask Oryn anything, or tell it to control your laptop…" aria-label="Message Oryn"></textarea>
+            <textarea id="composer-input" rows="1" placeholder="How can I help you today?" aria-label="How can I help you today?"></textarea>
             <div class="composer-foot">
-              <div class="composer-hint" id="composer-hint">Enter to send · Shift+Enter for a new line</div>
-              <div class="composer-buttons">
+              <div class="composer-foot-left">
+                <button class="circle-btn" id="attach-btn" type="button" title="Add content">
+                  <svg class="icon"><use href="#i-plus"/></svg>
+                </button>
+                <div class="segmented-control" role="group">
+                  <button type="button" class="segment-btn active" data-mode="chat">Chat</button>
+                  <button type="button" class="segment-btn" data-mode="cowork">Cowork</button>
+                </div>
+              </div>
+              <div class="composer-foot-right">
+                <button class="model-pill-btn" id="model-pill-btn" type="button" title="Select model">
+                  <span id="composer-model-name">Sonnet 3.5 Medium</span>
+                  <svg class="icon-inline"><use href="#i-chevron"/></svg>
+                </button>
                 <button class="icon-button" id="mic-btn" type="button" title="Voice input" aria-label="Voice input">
                   <svg class="icon"><use href="#i-mic"/></svg>
                 </button>
-                <button class="button primary send" id="send-btn" type="submit">
-                  <svg class="icon"><use href="#i-send"/></svg><span>Send</span>
+                <button class="icon-button" id="voice-wave-btn" type="button" title="Live voice" aria-label="Live voice">
+                  <svg class="icon"><use href="#i-soundwave"/></svg>
+                </button>
+                <button class="button primary send" id="send-btn" type="submit" title="Send message" aria-label="Send message">
+                  <svg class="icon"><use href="#i-send"/></svg>
                 </button>
               </div>
             </div>
