@@ -843,11 +843,18 @@ const PRESETS = {
 };
 const cache = /* @__PURE__ */ new Map();
 function resolvePreset(state, size) {
-  const key = `${state}-${size}`;
+  state = state || "working";
+  if (!STATE_TO_MODE[state]) state = "working";
+  var s = Number(size) || 64;
+  var targetSize = 64;
+  if (s <= 26) targetSize = 20;
+  else if (s <= 45) targetSize = 32;
+  else targetSize = 64;
+  const key = `${state}-${targetSize}`;
   const hit = cache.get(key);
   if (hit) return hit;
   const mode = STATE_TO_MODE[state];
-  const preset = PRESETS[mode][size];
+  const preset = PRESETS[mode][targetSize];
   let opts = { ...BASE_PROFILES[mode] };
   if (preset.count !== 1) opts = scaleCounts(opts, preset.count);
   if (preset.size !== 1) opts = scaleRadii(opts, preset.size);
@@ -902,12 +909,13 @@ function mountThinkingOrb(canvas, options) {
     var preset = resolvePreset(state, size);
     var frameFn = MODE_FRAMES[preset.mode];
     if (!frameFn) return;
-    var isDark = theme === "dark" || (theme === "auto" && typeof document !== "undefined" && document.documentElement.dataset.theme !== "light");
+    var isDarkTheme = theme === "dark" || (theme === "auto" && typeof document !== "undefined" && document.documentElement.dataset.theme !== "light");
+    var isDarkInk = !isDarkTheme;
     var tint = parseTint(color);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, size, size);
     var frame = frameFn(size, tSec, preset.opts);
-    paintFrame(ctx, frame, isDark, tint);
+    paintFrame(ctx, frame, isDarkInk, tint);
   }
 
   function loop() {

@@ -40,7 +40,8 @@ Direct Action & Tool Use:
 - You have access to a 313-tool catalog: use search_openagent_tools or openagent_execute if an extended tool (Notion, SketchUp 3D, Three.js viewer, etc.) is needed.
 - Never give manual instructions, never tell the user to open an editor, and never ask them to copy-paste commands you can execute yourself.
 - You have memory: STM (short term active notes) and LTM (long term permanent knowledge).
-- After tools execute, respond with a direct, concise message confirming results or taking the next step. Keep responses brief and punchy."""
+- After tools execute, respond with a direct, concise message confirming results or taking the next step. Keep responses brief and punchy.
+- UI Dashboard & Visuals: The Oryn web dashboard features Jakub Antalik dotted thinking orbs with 9 mathematical states (working, searching, solving, listening, connecting, weaving, composing, breathing, shaping) live next to reasoning indicators in the chat. The user can type /orb in the UI dashboard to see an interactive live gallery of all 9 orbs. You can launch the desktop dashboard at any time using launch_desktop_ui."""
 
 BANNER = r"""
   ██████╗ ██████╗ ██╗   ██╗███╗   ██╗
