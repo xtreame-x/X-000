@@ -144,6 +144,18 @@ SCHEMA: list[dict[str, Any]] = [
             {"path": "voice.stt_enabled", "label": "Speech input", "type": "boolean"},
             {"path": "voice.tts_enabled", "label": "Spoken replies", "type": "boolean"},
             {
+                "path": "voice.tts_engine",
+                "label": "TTS engine",
+                "type": "select",
+                "options": ["paradee", "pyttsx3"],
+            },
+            {
+                "path": "voice.paradee_voice",
+                "label": "Paradee voice",
+                "type": "select",
+                "options": ["af_heart", "am_puck", "bf_isabella", "bm_fable"],
+            },
+            {
                 "path": "voice.whisper_model",
                 "label": "Whisper model",
                 "type": "select",

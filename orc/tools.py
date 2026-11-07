@@ -219,6 +219,20 @@ def create_or_modify_tool(tool_type: str, name: str, code: str, description: str
     return f"unknown tool_type: {tool_type}"
 
 
+def launch_desktop_ui() -> str:
+    """Launch the Oryn desktop UI dashboard window (http://localhost:4242).
+    
+    Returns:
+        Status message confirming the UI is launching.
+    """
+    logger.info("Native tool launch_desktop_ui called")
+    import sys
+    import subprocess
+    from orc.config import ORYN_ROOT
+    subprocess.Popen([sys.executable, os.path.join(ORYN_ROOT, "oryn_ui.py")])
+    return "Oryn desktop dashboard launched at http://localhost:4242"
+
+
 def get_native_tools() -> List[Callable]:
     """Return the list of native callable tools for model binding."""
     return [
@@ -230,6 +244,7 @@ def get_native_tools() -> List[Callable]:
         manage_memory,
         ui_control,
         create_or_modify_tool,
+        launch_desktop_ui,
         # OpenAgent 75-tool bridge & high-frequency tools (12 tools)
         create_timer,
         create_alarm,

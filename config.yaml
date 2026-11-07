@@ -37,6 +37,8 @@ search:
 voice:
   stt_enabled: true
   tts_enabled: true
+  tts_engine: paradee
+  paradee_voice: af_heart
   whisper_model: tiny
   tts_rate: 175
   tts_voice: 0

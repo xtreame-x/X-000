@@ -62,6 +62,7 @@ COMMANDS = {
     "plugins":   "list installed plugins",
     "tasks":     "list background tasks",
     "voice":     "toggle voice mode",
+    "say":       "speak phrase with TTS (say <text>)",
     "ui":        "launch desktop UI dashboard (http://localhost:4242)",
     "login":     "1-click browser sign-in (login drive | login notion)",
     "auth":      "alias for login (auth drive | auth notion)",
@@ -515,6 +516,12 @@ def handle_builtin(cmd, config, providers, voice_mgr, plugins, voice_mode_ref):
             for t in tasks:
                 print(f"  {t.id} | {t.status.value} | {t.command[:50]}")
             print()
+        return True
+
+    if cmd.startswith("say "):
+        phrase = cmd[4:].strip()
+        if phrase and voice_mgr:
+            voice_mgr.speak(phrase)
         return True
 
     if cmd == "voice":

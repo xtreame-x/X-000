@@ -4,6 +4,10 @@ from collections import deque
 from typing import List, Optional, Callable
 from .base import AIProvider, ChatMessage, ChatResponse
 from orc.logger import get_logger
+import logging
+# Silence verbose SDK warnings about internal non-text parts (thought/function signatures)
+logging.getLogger("google_genai").setLevel(logging.ERROR)
+logging.getLogger("google_genai.types").setLevel(logging.ERROR)
 
 logger = get_logger('providers.gemini')
 
@@ -158,11 +162,18 @@ class GeminiProvider(AIProvider):
         if response.candidates and response.candidates[0].content and response.candidates[0].content.parts:
             text_parts = [
                 part.text for part in response.candidates[0].content.parts
-                if getattr(part, 'text', None)
+                if getattr(part, 'text', None) and not getattr(part, 'thought', False)
             ]
-            content = "".join(text_parts)
-        if not content and hasattr(response, 'text') and response.text:
-            content = response.text
+            content = "".join(text_parts).strip()
+
+        # If AFC completed or model called a tool but returned no final text part
+        if not content and response.candidates and response.candidates[0].content and response.candidates[0].content.parts:
+            fn_calls = [
+                part.function_call.name for part in response.candidates[0].content.parts
+                if getattr(part, 'function_call', None)
+            ]
+            if fn_calls:
+                content = f"Executed {', '.join(fn_calls)}." 
 
         tokens_in = 0
         tokens_out = 0

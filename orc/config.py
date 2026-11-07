@@ -29,6 +29,8 @@ DEFAULTS = {
     'voice': {
         'stt_enabled': True,
         'tts_enabled': True,
+        'tts_engine': 'paradee',
+        'paradee_voice': 'af_heart',
         'whisper_model': 'tiny',
         'tts_rate': 175,
         'tts_voice': 0,
