@@ -784,6 +784,7 @@ const MODE_DRAWS = Object.fromEntries(
   ])
 );
 const STATE_TO_MODE = {
+  thinking: "rubik",
   working: "orbits",
   searching: "globe",
   solving: "rubik",
@@ -843,8 +844,8 @@ const PRESETS = {
 };
 const cache = /* @__PURE__ */ new Map();
 function resolvePreset(state, size) {
-  state = state || "working";
-  if (!STATE_TO_MODE[state]) state = "working";
+  state = state || "thinking";
+  if (!STATE_TO_MODE[state]) state = "thinking";
   var s = Number(size) || 64;
   var targetSize = 64;
   if (s <= 26) targetSize = 20;

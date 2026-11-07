@@ -3523,4 +3523,22 @@ input[type="range"] {
 .thinking-sub {
   font-size: 11px;
   color: #76756f;
-}
+}
+
+/* Claude Hero Thinking Orb */
+.hero-orb-wrap {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hero-orb-canvas {
+  width: 44px;
+  height: 44px;
+  display: block;
+  border-radius: 50%;
+}
