@@ -1238,6 +1238,24 @@ select {
   max-width: 100%;
 }
 
+.thinking-orb-wrap {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.thinking-orb-canvas {
+  width: 48px;
+  height: 48px;
+  display: block;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.45));
+}
+
 .orb-wrapper {
   position: relative;
   width: 32px;

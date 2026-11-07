@@ -499,25 +499,23 @@
     scrollChat();
   }
 
+  let activeThinkingOrb = null;
   let thinkingInterval = null;
 
-  function addTyping() {
+  function addTyping(stateName) {
     const thread = $("#chat-thread");
     if (!thread || $("#typing")) return;
     const el = document.createElement("div");
     el.className = "msg assistant";
     el.id = "typing";
     const startTime = performance.now();
+    const orbState = stateName || "working";
 
     el.innerHTML = `
       <div class="avatar oryn" aria-hidden="true"><img src="/assets/06-app-icon.svg" alt="Oryn" width="22" height="22" style="border-radius: 5px; display: block;"></div>
       <div class="thinking-container">
-        <div class="orb-wrapper" aria-hidden="true">
-          <div class="orb-ambient-glow"></div>
-          <div class="orb-core"></div>
-          <div class="orb-ring ring-1"></div>
-          <div class="orb-ring ring-2"></div>
-          <div class="orb-ring ring-3"></div>
+        <div class="thinking-orb-wrap">
+          <canvas class="thinking-orb-canvas" width="48" height="48" aria-label="Thinking Orb"></canvas>
         </div>
         <div class="thinking-info">
           <div class="thinking-headline">
@@ -529,6 +527,20 @@
       </div>`;
     thread.appendChild(el);
     scrollChat();
+
+    const canvas = $(".thinking-orb-canvas", el);
+    if (canvas && window.ThinkingOrbs) {
+      try {
+        activeThinkingOrb = window.ThinkingOrbs.mount(canvas, {
+          state: orbState,
+          size: 48,
+          color: "#38bdf8",
+          theme: document.documentElement.dataset.theme === "light" ? "light" : "dark"
+        });
+      } catch (err) {
+        console.warn("Could not mount Jakub Antalik ThinkingOrb:", err);
+      }
+    }
 
     if (thinkingInterval) clearInterval(thinkingInterval);
     thinkingInterval = setInterval(() => {
@@ -544,6 +556,12 @@
   }
 
   function removeTyping() {
+    if (activeThinkingOrb) {
+      try {
+        activeThinkingOrb.destroy();
+      } catch (e) {}
+      activeThinkingOrb = null;
+    }
     if (thinkingInterval) {
       clearInterval(thinkingInterval);
       thinkingInterval = null;
@@ -579,7 +597,13 @@
       autoGrow(input);
     }
     setComposerBusy(true);
-    addTyping();
+    const qLower = message.toLowerCase();
+    const stateName = (qLower.includes("search") || qLower.includes("find") || qLower.includes("lookup"))
+      ? "searching"
+      : (qLower.includes("solve") || qLower.includes("code") || qLower.includes("calculate") || qLower.includes("fix"))
+      ? "solving"
+      : "working";
+    addTyping(stateName);
 
     try {
       const data = await api("/api/chat", { method: "POST", body: { message } });
